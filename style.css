@@ -1,0 +1,360 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #38bdf8;
+    --border: #334155;
+    --radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+}
+
+header {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.badge {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.controls-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.controls-row input {
+    flex: 1;
+    padding: 12px 16px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.controls-row input:focus {
+    border-color: var(--accent);
+}
+
+.action-btn {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    padding: 0 14px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.request-btn {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    font-size: 16px;
+}
+
+/* Category Filter Tabs Styling */
+.category-tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    scrollbar-width: none;
+}
+
+.category-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-btn {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background-color: var(--accent);
+    color: var(--bg-color);
+    border-color: var(--accent);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    flex: 1;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card:active {
+    transform: scale(0.96);
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.card span {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 30px;
+    padding: 16px 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer-info {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.footer-info strong {
+    color: var(--accent);
+}
+
+.footer-copy {
+    font-size: 11px;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+/* Modals Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 24px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: popUp 0.2s ease;
+}
+
+.welcome-popup {
+    text-align: left;
+}
+
+.welcome-popup .modal-emoji {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.welcome-popup h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.welcome-popup .modal-sub {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.instruction-box {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.instruction-box h4 {
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.instruction-box p {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.modal-emoji {
+    font-size: 56px;
+    margin-bottom: 16px;
+    color: var(--accent);
+}
+
+.modal-content h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.modal-sub {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.modal-cat {
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Request Form Styling */
+#requestSignForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#requestSignForm input, #requestSignForm textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 13px;
+    outline: none;
+}
+
+#requestSignForm textarea {
+    resize: none;
+    height: 70px;
+}
+
+.submit-btn {
+    background-color: var(--accent);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 100%;
+}
