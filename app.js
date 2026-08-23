@@ -188,7 +188,7 @@ const signsData = [
     {
         id: "fam-aunt",
         category: "emotions",
-        title: "Aunt (चाची / ताए / मामी)",
+        title: "Aunt (चाची / ताई / मामी)",
         gesture: "Tap thumb of a modified 'A' hand against the side of your chin.",
         hindiGesture: "गाल के पास 'A' आकार के हाथ से इशारा करें।"
     },
@@ -206,7 +206,7 @@ const signsData = [
         category: "colors",
         title: "Blue (नीला)",
         gesture: "Shake a 'B' handshape slightly back and forth.",
-        hindiGesture: "हाथ को 'B' आकार में रखकर हल्का सा हवा में hilaen।"
+        hindiGesture: "हाथ को 'B' आकार में रखकर हल्का सा हवा में हिलाएं।"
     },
     {
         id: "col-green",
@@ -329,6 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderSigns(signsData);
     setupFilters();
     setupSearch();
+    setupModalClose(); // Popup close handling
 });
 
 function renderSigns(data) {
@@ -377,5 +378,33 @@ function setupSearch() {
             item.hindiGesture.includes(query)
         );
         renderSigns(filtered);
+    });
+}
+
+// Robust Popup / Modal Close Handler
+function setupModalClose() {
+    const modal = document.getElementById('signModal');
+    if (!modal) return;
+
+    // Close buttons (supports class .close-btn or attribute data-dismiss)
+    const closeElements = modal.querySelectorAll('.close-btn, [data-dismiss="modal"]');
+    closeElements.forEach(el => {
+        el.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    });
+
+    // Close when clicking on the dark background overlay outside the modal content
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Close on pressing 'Escape' key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            modal.style.display = 'none';
+        }
     });
 }
