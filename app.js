@@ -324,12 +324,13 @@ const signsData = [
     }
 ];
 
-// Core Execution
+// Core Execution & Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
     try {
         renderSigns(signsData);
         setupFilters();
         setupSearch();
+        setupModalAndStartButton(); // Let's Get Started & Popup close handler
     } catch (err) {
         console.error("Error initializing app:", err);
     }
@@ -381,5 +382,38 @@ function setupSearch() {
             item.hindiGesture.includes(query)
         );
         renderSigns(filtered);
+    });
+}
+
+// Handler for "Let's Get Started" button and Popup Close logic
+function setupModalAndStartButton() {
+    // Modal selectors (supporting multiple possible IDs/classes for safety)
+    const modals = document.querySelectorAll('.modal, #welcomeModal, #signModal');
+    
+    // "Let's Get Started" buttons
+    const startButtons = document.querySelectorAll('#startBtn, .start-btn, button');
+    startButtons.forEach(btn => {
+        if (btn.textContent.includes("Get Started") || btn.id === "startBtn" || btn.classList.contains("start-btn")) {
+            btn.addEventListener('click', () => {
+                modals.forEach(m => m.style.display = 'none');
+            });
+        }
+    });
+
+    // Close buttons (cross buttons)
+    const closeButtons = document.querySelectorAll('.close-btn, [data-dismiss="modal"]');
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modals.forEach(m => m.style.display = 'none');
+        });
+    });
+
+    // Background click to close
+    window.addEventListener('click', (e) => {
+        modals.forEach(m => {
+            if (e.target === m) {
+                m.style.display = 'none';
+            }
+        });
     });
 }
