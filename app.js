@@ -92,16 +92,39 @@ const signData = [
     { id: 84, enTitle: "Number: 9", hiTitle: "गिनती: 9", enCat: "Counting", hiCat: "गिनती", icon: "9️⃣", enDesc: "Thumb touching index finger tip.", hiDesc: "अंगूठा तर्जनी उंगली के सिरे को छुए।" },
     { id: 85, enTitle: "Number: 10", hiTitle: "गिनती: 10", enCat: "Counting", hiCat: "गिनती", icon: "🔟", enDesc: "Make a fist and shake thumb slightly side to side.", hiDesc: "मुट्ठी बंद करें और अंगूठे को हल्का सा हिलाएं।" },
 
-    // --- Daily Classroom Commands & Needs ---
+    // --- Daily Classroom Commands & Needs (Expanded) ---
     { id: 86, enTitle: "Help", hiTitle: "मदद (Madad)", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🤝", enDesc: "Place your fist with thumb up onto the palm of your other hand.", hiDesc: "एक हाथ की हथेली पर दूसरे हाथ की मुट्ठी (अंगूठा ऊपर) रखें।" },
     { id: 87, enTitle: "Water / Drink", hiTitle: "पानी / प्यास", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "💧", enDesc: "Tap chin twice with index and middle fingers shaped like 'W'.", hiDesc: "'W' आकार की उंगलियों से ठोड़ी को दो बार थपथपाएं।" },
     { id: 88, enTitle: "Restroom", hiTitle: "शौचालय", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🚻", enDesc: "Form a 'T' with hands and shake gently.", hiDesc: "हाथों से 'T' का आकार बनाकर हल्का सा हिलाएं।" },
     { id: 89, enTitle: "Finish / Done", hiTitle: "समाप्त / हो गया", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "✨", enDesc: "Twist both hands outward palms facing chest.", hiDesc: "दोनों हाथों को बाहर की ओर घुमाएं।" },
+    { id: 90, enTitle: "Thank You", hiTitle: "धन्यवाद", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🙏", enDesc: "Touch fingertips to chin and move hand outward.", hiDesc: "उंगलियों के सिरों को ठोड़ी से छूकर हाथ को सामने की ओर लाएं।" },
+    { id: 91, enTitle: "Please", hiTitle: "कृपया", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🤲", enDesc: "Rub flat hand in a circular motion on your chest.", hiDesc: "चपटे हाथ को सीने पर गोलाकार घुमाएं।" },
+    { id: 92, enTitle: "Sorry", hiTitle: "माफ़ कीजिए", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🙇", enDesc: "Make a fist and rub it in a circular motion on your chest.", hiDesc: "मुट्ठी बंद करके सीने पर गोलाकार घुमाएं।" },
+    { id: 93, enTitle: "Eat / Food", hiTitle: "खाना", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🍲", enDesc: "Tap fingertips to your mouth twice.", hiDesc: "उंगलियों के सिरों को मुंह के पास दो बार स्पर्श करें।" },
+    { id: 94, enTitle: "Sleep", hiTitle: "सोना", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "💤", enDesc: "Tilt head and rest flat hands side-by-side next to your cheek.", hiDesc: "सिर झुकाकर दोनों चपटे हाथों को गाल के पास रखें।" },
+    { id: 95, enTitle: "Walk", hiTitle: "चलना", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🚶", enDesc: "Move flat hands alternately forward and backward.", hiDesc: "चपटे हाथों को आगे-पीछे चलाएं।" },
+    { id: 96, enTitle: "Think", hiTitle: "सोचना", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🧠", enDesc: "Tap index finger gently on the side of your forehead.", hiDesc: "तर्जनी उंगली को माथे के साइड में हल्के से छुएं।" },
+
+    // --- Emotions & Family ---
+    { id: 97, enTitle: "Happy", hiTitle: "खुश", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "😊", enDesc: "Brush open hands upward on your chest repeatedly.", hiDesc: "सीने पर खुले हाथों को ऊपर की ओर उठाएं।" },
+    { id: 98, enTitle: "Sad", hiTitle: "दुखी", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "😢", enDesc: "Trace hands downward in front of your face with a sad expression.", hiDesc: "उदास चेहरे के साथ हाथों को चेहरे के सामने नीचे की ओर लाएं।" },
+    { id: 99, enTitle: "Angry", hiTitle: "गुस्सा", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "😡", enDesc: "Clench hands like claws and pull them away from your face.", hiDesc: "हाथों को पंजे की तरह बंद करके चेहरे के सामने से खींचें।" },
+    { id: 100, enTitle: "Mother / Mom", hiTitle: "माँ", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👩", enDesc: "Tap thumb of open hand against your chin.", hiDesc: "खुले हाथ के अंगूठे को ठोड़ी पर स्पर्श करें।" },
+    { id: 101, enTitle: "Father / Dad", hiTitle: "पिता", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👨", enDesc: "Tap thumb of open hand against your forehead.", hiDesc: "खुले हाथ के अंगूठे को माथे पर स्पर्श करें।" },
+    { id: 102, enTitle: "Brother", hiTitle: "भाई", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👦", enDesc: "Bring index fingers together from forehead pointing forward.", hiDesc: "माथे से तर्जनी उंगलियों को आगे की ओर लाएं।" },
+    { id: 103, enTitle: "Sister", hiTitle: "बहन", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👧", enDesc: "Slide thumb of one hand down the index finger of the other hand.", hiDesc: "एक हाथ के अंगूठे को दूसरे हाथ की तर्जनी उंगली पर नीचे लाएं।" },
+    { id: 104, enTitle: "Friend", hiTitle: "दोस्त", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "🤝", enDesc: "Hook index fingers together back and forth.", hiDesc: "दोनों हाथों की तर्जनी उंगलियों को आपस में हुक करें।" },
+
+    // --- Colors ---
+    { id: 105, enTitle: "Red", hiTitle: "लाल", enCat: "Colors", hiCat: "रंग", icon: "🔴", enDesc: "Draw index finger down from lips twice.", hiDesc: "तर्जनी उंगली को होंठों से नीचे की ओर दो बार चलाएं।" },
+    { id: 106, enTitle: "Blue", hiTitle: "नीला", enCat: "Colors", hiCat: "रंग", icon: "🔵", enDesc: "Shake a 'B' handshape slightly back and forth.", hiDesc: "हाथ को 'B' आकार में रखकर हल्का सा हवा में हिलाएं।" },
+    { id: 107, enTitle: "Green", hiTitle: "हरा", enCat: "Colors", hiCat: "रंग", icon: "🟢", enDesc: "Shake a 'G' handshape slightly back and forth.", hiDesc: "हाथ को 'G' आकार में रखकर हल्का सा हिलाएं।" },
+    { id: 108, enTitle: "Yellow", hiTitle: "पीला", enCat: "Colors", hiCat: "रंग", icon: "🟡", enDesc: "Twist a 'Y' handshape back and forth near the side.", hiDesc: "हाथ को 'Y' आकार में रखकर कलाई को घुमाएं।" },
 
     // --- Academics (Math & Science) ---
-    { id: 90, enTitle: "Addition (+)", hiTitle: "जोड़ / गणित", enCat: "Academics", hiCat: "शैक्षणिक", icon: "➕", enDesc: "Cross your index fingers like a plus sign.", hiDesc: "अपनी तर्जनी उंगलियों को प्लस के निशान की तरह क्रॉस करें।" },
-    { id: 91, enTitle: "Atom", hiTitle: "परमाणु (Atom)", enCat: "Academics", hiCat: "शैक्षणिक", icon: "⚛️", enDesc: "Draw a small circular motion with index finger representing orbits.", hiDesc: "हवा में तर्जनी उंगली से कक्षा को दर्शाने वाला गोलाकार चक्कर बनाएं।" },
-    { id: 92, enTitle: "Photosynthesis", hiTitle: "प्रकाश संश्लेषण", enCat: "Academics", hiCat: "शैक्षणिक", icon: "🌱", enDesc: "Simulate plant growing upwards absorbing sunlight.", hiDesc: "हथेलियों को फैलाकर पौधे के ऊपर बढ़ने का अभिनय करें।" }
+    { id: 109, enTitle: "Addition (+)", hiTitle: "जोड़ / गणित", enCat: "Academics", hiCat: "शैक्षणिक", icon: "➕", enDesc: "Cross your index fingers like a plus sign.", hiDesc: "अपनी तर्जनी उंगलियों को प्लस के निशान की तरह क्रॉस करें।" },
+    { id: 110, enTitle: "Atom", hiTitle: "परमाणु (Atom)", enCat: "Academics", hiCat: "शैक्षणिक", icon: "⚛️", enDesc: "Draw a small circular motion with index finger representing orbits.", hiDesc: "हवा में तर्जनी उंगली से कक्षा को दर्शाने वाला गोलाकार चक्कर बनाएं।" },
+    { id: 111, enTitle: "Photosynthesis", hiTitle: "प्रकाश संश्लेषण", enCat: "Academics", hiCat: "शैक्षणिक", icon: "🌱", enDesc: "Simulate plant growing upwards absorbing sunlight.", hiDesc: "हथेलियों को फैलाकर पौधे के ऊपर बढ़ने का अभिनय करें।" }
 ];
 
 let currentLang = 'en';
