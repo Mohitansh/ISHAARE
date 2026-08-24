@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ishare-v2'; // Version change kar diya
+const CACHE_NAME = 'ishare-v3'; // Upgraded version for new assets
 const assets = [
   './',
   './index.html',
@@ -9,7 +9,7 @@ const assets = [
 ];
 
 self.addEventListener('install', (e) => {
-  self.skipWaiting(); // Naye service worker ko turant active karne ke liye
+  self.skipWaiting();
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(assets);
@@ -23,7 +23,7 @@ self.addEventListener('activate', (e) => {
       return Promise.all(
         keys.map((key) => {
           if (key !== CACHE_NAME) {
-            return caches.delete(key); // Purana saara cache uda dega
+            return caches.delete(key);
           }
         })
       );

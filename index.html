@@ -38,32 +38,13 @@
             <button class="tab-btn" data-cat="Hindi Varnmala">हिंदी वर्णमाला</button>
             <button class="tab-btn" data-cat="Counting">Counting</button>
             <button class="tab-btn" data-cat="Daily Use">Daily Use</button>
+            <button class="tab-btn" data-cat="Pronouns">Pronouns</button>
+            <button class="tab-btn" data-cat="Greetings">Greetings</button>
+            <button class="tab-btn" data-cat="Questions">Questions</button>
+            <button class="tab-btn" data-cat="Emotions & Desires">Emotions</button>
+            <button class="tab-btn" data-cat="Colors">Colors</button>
             <button class="tab-btn" data-cat="Academics">Academics</button>
         </div>
-<div class="category-tabs">
-    <button class="tab-btn active" data-cat="all">All</button>
-    <button class="tab-btn" data-cat="English A-Z">English A-Z</button>
-    <button class="tab-btn" data-cat="Hindi Varnmala">हिंदी वर्णमाला</button>
-    <button class="tab-btn" data-cat="Counting">Counting</button>
-    <button class="tab-btn" data-cat="Daily Use">Daily Use</button>
-    <button class="tab-btn" data-cat="Emotions">Emotions</button>
-    <button class="tab-btn" data-cat="Colors">Colors</button>
-    <button class="tab-btn" data-cat="Academics">Academics</button>
-</div>
-<div class="category-tabs">
-    <button class="tab-btn active" data-cat="all">All</button>
-    <button class="tab-btn" data-cat="English A-Z">English A-Z</button>
-    <button class="tab-btn" data-cat="Hindi Varnmala">हिंदी वर्णमाला</button>
-    <button class="tab-btn" data-cat="Counting">Counting</button>
-    <button class="tab-btn" data-cat="Daily Use">Daily Use</button>
-    <button class="tab-btn" data-cat="Pronouns">Pronouns</button>
-    <button class="tab-btn" data-cat="Greetings">Greetings</button>
-    <button class="tab-btn" data-cat="Questions">Questions</button>
-    <button class="tab-btn" data-cat="Emotions & Desires">Emotions</button>
-    <button class="tab-btn" data-cat="Colors">Colors</button>
-    <button class="tab-btn" data-cat="Academics">Academics</button>
-</div>
-
 
         <!-- Cards Grid Container -->
         <main id="cardGrid" class="grid-container">
@@ -72,7 +53,7 @@
 
         <!-- Footer Section -->
         <footer>
-            <p class="footer-info">Crafted with passion for Inclusive Education by <strong>Ansh Raghav</strong> (Moradabad).</p>
+            <p class="footer-info">Crafted with passion for inclusive education by <strong>Ansh Raghav</strong> (Moradabad).</p>
             <p class="footer-copy">&copy; 2026 Mohitansh. All Rights Reserved.</p>
         </footer>
     </div>
@@ -89,12 +70,12 @@
                 <h4>📖 How to Use:</h4>
                 <p>1. <strong>Tabs</strong> par click karke category select karein (A-Z, हिंदी वर्णमाला, Counting).</p>
                 <p>2. <strong>Search Bar</strong> mein direct koi bhi word ya letter type karein.</p>
-                <p>3. <strong>Card</strong> par click karke uska detailed gesture/sign meaning dekhein.</p>
+                <p>3. <strong>Card</strong> par click karke uska detailed gesture aur <strong>Educator Notes</strong> dekhein.</p>
             </div>
 
             <div class="instruction-box suggestion-box">
                 <h4>💡 Suggestions & Requests:</h4>
-                <p>Agar aapko koi naya sign chahiye jo list mein nahi hai, toh upar diye gaye <strong>[?]</strong> button par click karke apne suggestions/requests direct humein bhej sakte हैं!</p>
+                <p>Agar aapko koi naya sign chahiye jo list mein nahi hai, toh upar diye gaye <strong>[?]</strong> button par click karke apne suggestions/requests direct humein bhej sakte hain!</p>
             </div>
 
             <button id="gotItBtn" class="submit-btn">Got it, Let's Start!</button>
@@ -109,6 +90,9 @@
             <h2 id="modalTitle">Title</h2>
             <p id="modalCategory" class="modal-cat">Category</p>
             <p id="modalDesc" class="modal-desc">Description goes here...</p>
+            
+            <!-- Educator Notes Box for Special Educators & Government Proposals -->
+            <div id="educatorNoteBox" class="educator-note-box" style="display: none;"></div>
         </div>
     </div>
 
@@ -128,5 +112,15 @@
     </div>
 
     <script src="app.js"></script>
+    <script>
+        // Register Service Worker for 100% Offline Capability
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker registered successfully!', reg.scope))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+    </script>
 </body>
 </html>
