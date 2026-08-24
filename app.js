@@ -92,157 +92,59 @@ const signData = [
     { id: 84, enTitle: "Number: 9", hiTitle: "गिनती: 9", enCat: "Counting", hiCat: "गिनती", icon: "9️⃣", enDesc: "Thumb touching index finger tip.", hiDesc: "अंगूठा तर्जनी उंगली के सिरे को छुए।" },
     { id: 85, enTitle: "Number: 10", hiTitle: "गिनती: 10", enCat: "Counting", hiCat: "गिनती", icon: "🔟", enDesc: "Make a fist and shake thumb slightly side to side.", hiDesc: "मुट्ठी बंद करें और अंगूठे को हल्का सा हिलाएं।" },
 
-    // --- Daily Classroom Commands & Needs (Expanded) ---
+    // --- Daily Classroom Commands & Needs ---
     { id: 86, enTitle: "Help", hiTitle: "मदद (Madad)", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🤝", enDesc: "Place your fist with thumb up onto the palm of your other hand.", hiDesc: "एक हाथ की हथेली पर दूसरे हाथ की मुट्ठी (अंगूठा ऊपर) रखें।" },
     { id: 87, enTitle: "Water / Drink", hiTitle: "पानी / प्यास", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "💧", enDesc: "Tap chin twice with index and middle fingers shaped like 'W'.", hiDesc: "'W' आकार की उंगलियों से ठोड़ी को दो बार थपथपाएं।" },
     { id: 88, enTitle: "Restroom", hiTitle: "शौचालय", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🚻", enDesc: "Form a 'T' with hands and shake gently.", hiDesc: "हाथों से 'T' का आकार बनाकर हल्का सा हिलाएं।" },
     { id: 89, enTitle: "Finish / Done", hiTitle: "समाप्त / हो गया", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "✨", enDesc: "Twist both hands outward palms facing chest.", hiDesc: "दोनों हाथों को बाहर की ओर घुमाएं।" },
-    { id: 90, enTitle: "Thank You", hiTitle: "धन्यवाद", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🙏", enDesc: "Touch fingertips to chin and move hand outward.", hiDesc: "उंगलियों के सिरों को ठोड़ी से छूकर हाथ को सामने की ओर लाएं।" },
-    { id: 91, enTitle: "Please", hiTitle: "कृपया", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🤲", enDesc: "Rub flat hand in a circular motion on your chest.", hiDesc: "चपटे हाथ को सीने पर गोलाकार घुमाएं।" },
-    { id: 92, enTitle: "Sorry", hiTitle: "माफ़ कीजिए", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🙇", enDesc: "Make a fist and rub it in a circular motion on your chest.", hiDesc: "मुट्ठी बंद करके सीने पर गोलाकार घुमाएं।" },
-    { id: 93, enTitle: "Eat / Food", hiTitle: "खाना", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🍲", enDesc: "Tap fingertips to your mouth twice.", hiDesc: "उंगलियों के सिरों को मुंह के पास दो बार स्पर्श करें।" },
-    { id: 94, enTitle: "Sleep", hiTitle: "सोना", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "💤", enDesc: "Tilt head and rest flat hands side-by-side next to your cheek.", hiDesc: "सिर झुकाकर दोनों चपटे हाथों को गाल के पास रखें।" },
-    { id: 95, enTitle: "Walk", hiTitle: "चलना", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🚶", enDesc: "Move flat hands alternately forward and backward.", hiDesc: "चपटे हाथों को आगे-पीछे चलाएं।" },
-    { id: 96, enTitle: "Think", hiTitle: "सोचना", enCat: "Daily Use", hiCat: "दैनिक उपयोग", icon: "🧠", enDesc: "Tap index finger gently on the side of your forehead.", hiDesc: "तर्जनी उंगली को माथे के साइड में हल्के से छुएं।" },
 
     // --- Emotions & Family ---
-    { id: 97, enTitle: "Happy", hiTitle: "खुश", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "😊", enDesc: "Brush open hands upward on your chest repeatedly.", hiDesc: "सीने पर खुले हाथों को ऊपर की ओर उठाएं।" },
-    { id: 98, enTitle: "Sad", hiTitle: "दुखी", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "😢", enDesc: "Trace hands downward in front of your face with a sad expression.", hiDesc: "उदास चेहरे के साथ हाथों को चेहरे के सामने नीचे की ओर लाएं।" },
-    { id: 99, enTitle: "Angry", hiTitle: "गुस्सा", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "😡", enDesc: "Clench hands like claws and pull them away from your face.", hiDesc: "हाथों को पंजे की तरह बंद करके चेहरे के सामने से खींचें।" },
-    { id: 100, enTitle: "Mother / Mom", hiTitle: "माँ", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👩", enDesc: "Tap thumb of open hand against your chin.", hiDesc: "खुले हाथ के अंगूठे को ठोड़ी पर स्पर्श करें।" },
-    { id: 101, enTitle: "Father / Dad", hiTitle: "पिता", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👨", enDesc: "Tap thumb of open hand against your forehead.", hiDesc: "खुले हाथ के अंगूठे को माथे पर स्पर्श करें।" },
-    { id: 102, enTitle: "Brother", hiTitle: "भाई", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👦", enDesc: "Bring index fingers together from forehead pointing forward.", hiDesc: "माथे से तर्जनी उंगलियों को आगे की ओर लाएं।" },
-    { id: 103, enTitle: "Sister", hiTitle: "बहन", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👧", enDesc: "Slide thumb of one hand down the index finger of the other hand.", hiDesc: "एक हाथ के अंगूठे को दूसरे हाथ की तर्जनी उंगली पर नीचे लाएं।" },
-    { id: 104, enTitle: "Friend", hiTitle: "दोस्त", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "🤝", enDesc: "Hook index fingers together back and forth.", hiDesc: "दोनों हाथों की तर्जनी उंगलियों को आपस में हुक करें।" },
+    { id: 90, enTitle: "Happy", hiTitle: "खुश", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "😊", enDesc: "Brush open hands upward on your chest repeatedly.", hiDesc: "सीने पर खुले हाथों को ऊपर की ओर उठाएं।" },
+    { id: 91, enTitle: "Sad", hiTitle: "दुखी", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "😢", enDesc: "Trace hands downward in front of your face with a sad expression.", hiDesc: "उदास चेहरे के साथ हाथों को चेहरे के सामने नीचे की ओर लाएं।" },
+    { id: 92, enTitle: "Angry", hiTitle: "गुस्सा", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "😡", enDesc: "Clench hands like claws and pull them away from your face.", hiDesc: "हाथों को पंजे की तरह बंद करके चेहरे के सामने से खींचें।" },
+    { id: 93, enTitle: "Mother / Mom", hiTitle: "माँ", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👩", enDesc: "Tap thumb of open hand against your chin.", hiDesc: "खुले हाथ के अंगूठे को ठोड़ी पर स्पर्श करें।" },
+    { id: 94, enTitle: "Father / Dad", hiTitle: "पिता", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👨", enDesc: "Tap thumb of open hand against your forehead.", hiDesc: "खुले हाथ के अंगूठे को माथे पर स्पर्श करें।" },
+    { id: 95, enTitle: "Brother", hiTitle: "भाई", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👦", enDesc: "Bring index fingers together from forehead pointing forward.", hiDesc: "माथे से तर्जनी उंगलियों को आगे की ओर लाएं।" },
+    { id: 96, enTitle: "Sister", hiTitle: "बहन", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "👧", enDesc: "Slide thumb of one hand down the index finger of the other hand.", hiDesc: "एक हाथ के अंगूठे को दूसरे हाथ की तर्जनी उंगली पर नीचे लाएं।" },
+    { id: 97, enTitle: "Friend", hiTitle: "दोस्त", enCat: "Emotions", hiCat: "भावनाएं व परिवार", icon: "🤝", enDesc: "Hook index fingers together back and forth.", hiDesc: "दोनों हाथों की तर्जनी उंगलियों को आपस में हुक करें।" },
 
     // --- Colors ---
-    { id: 105, enTitle: "Red", hiTitle: "लाल", enCat: "Colors", hiCat: "रंग", icon: "🔴", enDesc: "Draw index finger down from lips twice.", hiDesc: "तर्जनी उंगली को होंठों से नीचे की ओर दो बार चलाएं।" },
-    { id: 106, enTitle: "Blue", hiTitle: "नीला", enCat: "Colors", hiCat: "रंग", icon: "🔵", enDesc: "Shake a 'B' handshape slightly back and forth.", hiDesc: "हाथ को 'B' आकार में रखकर हल्का सा हवा में हिलाएं।" },
-    { id: 107, enTitle: "Green", hiTitle: "हरा", enCat: "Colors", hiCat: "रंग", icon: "🟢", enDesc: "Shake a 'G' handshape slightly back and forth.", hiDesc: "हाथ को 'G' आकार में रखकर हल्का सा हिलाएं।" },
-    { id: 108, enTitle: "Yellow", hiTitle: "पीला", enCat: "Colors", hiCat: "रंग", icon: "🟡", enDesc: "Twist a 'Y' handshape back and forth near the side.", hiDesc: "हाथ को 'Y' आकार में रखकर कलाई को घुमाएं।" },
+    { id: 98, enTitle: "Red", hiTitle: "लाल", enCat: "Colors", hiCat: "रंग", icon: "🔴", enDesc: "Draw index finger down from lips twice.", hiDesc: "तर्जनी उंगली को होंठों से नीचे की ओर दो बार चलाएं।" },
+    { id: 99, enTitle: "Blue", hiTitle: "नीला", enCat: "Colors", hiCat: "रंग", icon: "🔵", enDesc: "Shake a 'B' handshape slightly back and forth.", hiDesc: "हाथ को 'B' आकार में रखकर हल्का सा हवा में हिलाएं।" },
+    { id: 100, enTitle: "Green", hiTitle: "हरा", enCat: "Colors", hiCat: "रंग", icon: "🟢", enDesc: "Shake a 'G' handshape slightly back and forth.", hiDesc: "हाथ को 'G' आकार में रखकर हल्का सा हिलाएं।" },
+    { id: 101, enTitle: "Yellow", hiTitle: "पीला", enCat: "Colors", hiCat: "रंग", icon: "🟡", enDesc: "Twist a 'Y' handshape back and forth near the side.", hiDesc: "हाथ को 'Y' आकार में रखकर कलाई को घुमाएं।" },
+
+    // --- Pronouns ---
+    { id: 102, enTitle: "Me / I", hiTitle: "मैं / मुझे", enCat: "Pronouns", hiCat: "सर्वनाम", icon: "🙋‍♂️", enDesc: "Point your index finger directly at your own chest.", hiDesc: "तर्जनी उंगली से सीधे अपने सीने की ओर इशारा करें।" },
+    { id: 103, enTitle: "You", hiTitle: "तुम / आप", enCat: "Pronouns", hiCat: "सर्वनाम", icon: "🫵", enDesc: "Point your index finger forward toward the other person.", hiDesc: "तर्जनी उंगली से सामने वाले व्यक्ति की ओर इशारा करें।" },
+    { id: 104, enTitle: "He / She / It", hiTitle: "वह / यह", enCat: "Pronouns", hiCat: "सर्वनाम", icon: "👉", enDesc: "Point your index finger toward the side or someone else.", hiDesc: "तर्जनी उंगली से साइड में या किसी अन्य व्यक्ति की ओर इशारा करें।" },
+    { id: 105, enTitle: "We / Us", hiTitle: "हम", enCat: "Pronouns", hiCat: "सर्वनाम", icon: "👥", enDesc: "Point index finger to your right shoulder, then sweep across to your left shoulder.", hiDesc: "तर्जनी से अपने दाहिने कंधे से बाएं कंधे की तरफ अर्धवृत्त बनाएं।" },
+    { id: 106, enTitle: "They / Them", hiTitle: "वे / उन्हें", enCat: "Pronouns", hiCat: "सर्वनाम", icon: "👉👥", enDesc: "Point index finger and sweep it in an arc toward a group of people.", hiDesc: "तर्जनी उंगली से लोगों के समूह की ओर घुमावदार इशारा करें।" },
+
+    // --- Greetings & Polite Phrases ---
+    { id: 107, enTitle: "Hello", hiTitle: "नमस्ते / हैलो", enCat: "Greetings", hiCat: "अभिवादन", icon: "👋", enDesc: "Raise your hand near your head and wave it side to side.", hiDesc: "सिर के पास हाथ उठाकर बाएं-दाएं हिलाएं।" },
+    { id: 108, enTitle: "Goodbye", hiTitle: "अलविदा / बाय", enCat: "Greetings", hiCat: "अभिवादन", icon: "🙋", enDesc: "Raise hand and open/close fingers repeatedly as a waving gesture.", hiDesc: "हाथ उठाकर उंगलियों को बार-बार खोलें और बंद करें।" },
+    { id: 109, enTitle: "Nice to meet you", hiTitle: "आपसे मिलकर खुशी हुई", enCat: "Greetings", hiCat: "अभिवादन", icon: "🤝", enDesc: "Slide flat dominant hand across the palm of the non-dominant hand, then point to person.", hiDesc: "एक हाथ की हथेली पर दूसरे हाथ को चलाएं और सामने वाले की तरफ इशारा करें।" },
+    { id: 110, enTitle: "Thank You", hiTitle: "धन्यवाद", enCat: "Greetings", hiCat: "अभिवादन", icon: "🙏", enDesc: "Touch fingertips to chin and move hand outward.", hiDesc: "उंगलियों के सिरों को ठोड़ी से छूकर हाथ को सामने की ओर लाएं।" },
+    { id: 111, enTitle: "Please", hiTitle: "कृपया", enCat: "Greetings", hiCat: "अभिवादन", icon: "🤲", enDesc: "Rub flat hand in a circular motion on your chest.", hiDesc: "चपटे हाथ को सीने पर गोलाकार घुमाएं।" },
+    { id: 112, enTitle: "Sorry", hiTitle: "माफ़ कीजिए", enCat: "Greetings", hiCat: "अभिवादन", icon: "🙇", enDesc: "Make a fist and rub it in a circular motion on your chest.", hiDesc: "मुट्ठी बंद करके सीने पर गोलाकार घुमाएं।" },
+
+    // --- Questions & Conversational ---
+    { id: 113, enTitle: "What", hiTitle: "क्या", enCat: "Questions", hiCat: "प्रश्न व बातचीत", icon: "❓", enDesc: "Hold both open hands palms up and shake them slightly side to side with a questioning look.", hiDesc: "दोनों खुले हाथों को ऊपर की ओर रखकर हल्का सा हवा में हिलाएं।" },
+    { id: 114, enTitle: "Where", hiTitle: "कहाँ", enCat: "Questions", hiCat: "प्रश्न व बातचीत", icon: "📍", enDesc: "Point index finger up and shake it back and forth horizontally.", hiDesc: "तर्जनी उंगली को ऊपर रखकर क्षैतिज रूप से आ-जा कर हिलाएं।" },
+    { id: 115, enTitle: "Who", hiTitle: "कौन", enCat: "Questions", hiCat: "प्रश्न व बातचीत", icon: "👤", enDesc: "Trace a small circle around your mouth with the tip of your index finger.", hiDesc: "तर्जनी उंगली के सिरे से मुंह के चारों ओर छोटा गोला बनाएं।" },
+    { id: 116, enTitle: "How are you?", hiTitle: "आप कैसे हैं?", enCat: "Questions", hiCat: "प्रश्न व बातचीत", icon: "🤝", enDesc: "Place both flat hands against your chest, roll them outward and forward.", hiDesc: "दोनों चपटे हाथों को सीने पर रखकर आगे की ओर घुमाएं।" },
+    { id: 117, enTitle: "Do you need help?", hiTitle: "क्या आपको मदद चाहिए?", enCat: "Questions", hiCat: "प्रश्न व बातचीत", icon: "🙋‍♂️", enDesc: "Sign 'You', then make the 'Help' sign with a questioning facial expression.", hiDesc: "'आप' का इशारा करें, फिर चेहरे पर सवालिया भाव के साथ 'मदद' का संकेत दें।" },
+
+    // --- Emotions, Expressions & Desires ---
+    { id: 118, enTitle: "I Love You", hiTitle: "मैं तुमसे प्यार करता हूँ", enCat: "Emotions & Desires", hiCat: "भावनाएं व इच्छाएं", icon: "🤟", enDesc: "Extend thumb, index finger, and pinky finger out together (ASL sign for ILY).", hiDesc: "अंगूठा, तर्जनी और छोटी उंगली को एक साथ बाहर फैलाएं।" },
+    { id: 119, enTitle: "Love", hiTitle: "प्यार / प्रेम", enCat: "Emotions & Desires", hiCat: "भावनाएं व इच्छाएं", icon: "❤️", enDesc: "Cross both arms tightly across your chest over your heart.", hiDesc: "दोनों हाथों को सीने पर दिल के पास क्रॉस करके रखें।" },
+    { id: 120, enTitle: "Like", hiTitle: "पसंद करना", enCat: "Emotions & Desires", hiCat: "भावनाएं व इच्छाएं", icon: "👍", enDesc: "Pull thumb and middle finger away from your chest while extending other fingers.", hiDesc: "अंगूठा और मध्यमा उंगली को सीने से आगे की ओर खींचें।" },
+    { id: 121, enTitle: "Want", hiTitle: "चाहना", enCat: "Emotions & Desires", hiCat: "भावनाएं व इच्छाएं", icon: "🤲", enDesc: "Hold both clawed hands out and pull them inward toward your body.", hiDesc: "दोनों हाथों को पंजों की तरह आगे रखकर अपनी ओर खींचें।" },
+    { id: 122, enTitle: "Need", hiTitle: "जरूरत है", enCat: "Emotions & Desires", hiCat: "भावनाएं व इच्छाएं", icon: "❗", enDesc: "Bend your index finger like a hook and press it downward slightly.", hiDesc: "तर्जनी उंगली को हुक की तरह मोड़कर नीचे की ओर हल्का सा दबाएं।" },
 
     // --- Academics (Math & Science) ---
-    { id: 109, enTitle: "Addition (+)", hiTitle: "जोड़ / गणित", enCat: "Academics", hiCat: "शैक्षणिक", icon: "➕", enDesc: "Cross your index fingers like a plus sign.", hiDesc: "अपनी तर्जनी उंगलियों को प्लस के निशान की तरह क्रॉस करें।" },
-    { id: 110, enTitle: "Atom", hiTitle: "परमाणु (Atom)", enCat: "Academics", hiCat: "शैक्षणिक", icon: "⚛️", enDesc: "Draw a small circular motion with index finger representing orbits.", hiDesc: "हवा में तर्जनी उंगली से कक्षा को दर्शाने वाला गोलाकार चक्कर बनाएं।" },
-    { id: 111, enTitle: "Photosynthesis", hiTitle: "प्रकाश संश्लेषण", enCat: "Academics", hiCat: "शैक्षणिक", icon: "🌱", enDesc: "Simulate plant growing upwards absorbing sunlight.", hiDesc: "हथेलियों को फैलाकर पौधे के ऊपर बढ़ने का अभिनय करें।" }
+    { id: 123, enTitle: "Addition (+)", hiTitle: "जोड़ / गणित", enCat: "Academics", hiCat: "शैक्षणिक", icon: "➕", enDesc: "Cross your index fingers like a plus sign.", hiDesc: "अपनी तर्जनी उंगलियों को प्लस के निशान की तरह क्रॉस करें।" },
+    { id: 124, enTitle: "Atom", hiTitle: "परमाणु (Atom)", enCat: "Academics", hiCat: "शैक्षणिक", icon: "⚛️", enDesc: "Draw a small circular motion with index finger representing orbits.", hiDesc: "हवा में तर्जनी उंगली से कक्षा को दर्शाने वाला गोलाकार चक्कर बनाएं।" },
+    { id: 125, enTitle: "Photosynthesis", hiTitle: "प्रकाश संश्लेषण", enCat: "Academics", hiCat: "शैक्षणिक", icon: "🌱", enDesc: "Simulate plant growing upwards absorbing sunlight.", hiDesc: "हथेलियों को फैलाकर पौधे के ऊपर बढ़ने का अभिनय करें।" }
 ];
-
-let currentLang = 'en';
-let activeCategory = 'all';
-
-const cardGrid = document.getElementById('cardGrid');
-const searchInput = document.getElementById('searchInput');
-const langToggleBtn = document.getElementById('langToggleBtn');
-const openRequestModalBtn = document.getElementById('openRequestModalBtn');
-const tabButtons = document.querySelectorAll('.tab-btn');
-
-// Welcome Modal Elements
-const welcomeModal = document.getElementById('welcomeModal');
-const closeWelcome = document.getElementById('closeWelcome');
-const gotItBtn = document.getElementById('gotItBtn');
-
-const cardModal = document.getElementById('cardModal');
-const closeModal = document.getElementById('closeModal');
-const requestModal = document.getElementById('requestModal');
-const closeRequestModal = document.getElementById('closeRequestModal');
-
-const modalEmoji = document.getElementById('modalEmoji');
-const modalTitle = document.getElementById('modalTitle');
-const modalCategory = document.getElementById('modalCategory');
-const modalDesc = document.getElementById('modalDesc');
-
-function renderCards(data) {
-    cardGrid.innerHTML = '';
-    if (data.length === 0) {
-        cardGrid.innerHTML = `<p style="grid-column: span 2; text-align: center; color: var(--text-secondary); padding: 20px;">No signs found.</p>`;
-        return;
-    }
-
-    data.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        
-        const title = currentLang === 'en' ? item.enTitle : item.hiTitle;
-        const category = currentLang === 'en' ? item.enCat : item.hiCat;
-        const desc = currentLang === 'en' ? item.enDesc : item.hiDesc;
-
-        card.innerHTML = `
-            <div class="card-icon">${item.icon}</div>
-            <h3>${title}</h3>
-            <span>${category}</span>
-        `;
-        
-        card.addEventListener('click', () => {
-            modalEmoji.textContent = item.icon;
-            modalTitle.textContent = title;
-            modalCategory.textContent = category;
-            modalDesc.textContent = desc;
-            cardModal.style.display = 'flex';
-        });
-
-        cardGrid.appendChild(card);
-    });
-}
-
-function filterAndRender() {
-    const query = searchInput.value.toLowerCase();
-    
-    const filteredData = signData.filter(item => {
-        const matchesCategory = (activeCategory === 'all' || item.enCat === activeCategory);
-        const matchesSearch = (
-            item.enTitle.toLowerCase().includes(query) || 
-            item.hiTitle.toLowerCase().includes(query) || 
-            item.enCat.toLowerCase().includes(query) || 
-            item.hiCat.toLowerCase().includes(query)
-        );
-        return matchesCategory && matchesSearch;
-    });
-
-    renderCards(filteredData);
-}
-
-// Initial Render
-filterAndRender();
-
-// Welcome Modal Controls
-closeWelcome.addEventListener('click', () => {
-    welcomeModal.style.display = 'none';
-});
-
-gotItBtn.addEventListener('click', () => {
-    welcomeModal.style.display = 'none';
-});
-
-// Tab Click Events
-tabButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        tabButtons.forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
-        activeCategory = e.target.getAttribute('data-cat');
-        filterAndRender();
-    });
-});
-
-// Language Toggle
-langToggleBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'en' ? 'hi' : 'en';
-    langToggleBtn.textContent = currentLang === 'en' ? 'HI / EN' : 'EN / HI';
-    searchInput.placeholder = currentLang === 'en' ? "Search signs..." : "संकेत खोजें...";
-    filterAndRender();
-});
-
-// Search Input Event
-searchInput.addEventListener('input', () => {
-    filterAndRender();
-});
-
-// Modal Controls
-closeModal.addEventListener('click', () => cardModal.style.display = 'none');
-closeRequestModal.addEventListener('click', () => requestModal.style.display = 'none');
-openRequestModalBtn.addEventListener('click', () => requestModal.style.display = 'flex');
-
-window.addEventListener('click', (e) => {
-    if (e.target === cardModal) cardModal.style.display = 'none';
-    if (e.target === requestModal) requestModal.style.display = 'none';
-    if (e.target === welcomeModal) welcomeModal.style.display = 'none';
-});
