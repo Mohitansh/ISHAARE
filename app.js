@@ -148,3 +148,136 @@ const signData = [
     { id: 124, enTitle: "Atom", hiTitle: "परमाणु (Atom)", enCat: "Academics", hiCat: "शैक्षणिक", icon: "⚛️", enDesc: "Draw a small circular motion with index finger representing orbits.", hiDesc: "हवा में तर्जनी उंगली से कक्षा को दर्शाने वाला गोलाकार चक्कर बनाएं।" },
     { id: 125, enTitle: "Photosynthesis", hiTitle: "प्रकाश संश्लेषण", enCat: "Academics", hiCat: "शैक्षणिक", icon: "🌱", enDesc: "Simulate plant growing upwards absorbing sunlight.", hiDesc: "हथेलियों को फैलाकर पौधे के ऊपर बढ़ने का अभिनय करें।" }
 ];
+
+let currentLang = 'en';
+let activeCategory = 'all';
+
+const cardGrid = document.getElementById('cardGrid');
+const searchInput = document.getElementById('searchInput');
+const langToggleBtn = document.getElementById('langToggleBtn');
+const openRequestModalBtn = document.getElementById('openRequestModalBtn');
+const tabButtons = document.querySelectorAll('.tab-btn');
+
+// Welcome Modal Elements
+const welcomeModal = document.getElementById('welcomeModal');
+const closeWelcome = document.getElementById('closeWelcome');
+const gotItBtn = document.getElementById('gotItBtn');
+
+const cardModal = document.getElementById('cardModal');
+const closeModal = document.getElementById('closeModal');
+const requestModal = document.getElementById('requestModal');
+const closeRequestModal = document.getElementById('closeRequestModal');
+
+const modalEmoji = document.getElementById('modalEmoji');
+const modalTitle = document.getElementById('modalTitle');
+const modalCategory = document.getElementById('modalCategory');
+const modalDesc = document.getElementById('modalDesc');
+
+function renderCards(data) {
+    if (!cardGrid) return;
+    cardGrid.innerHTML = '';
+    if (data.length === 0) {
+        cardGrid.innerHTML = `<p style="grid-column: span 2; text-align: center; color: var(--text-secondary); padding: 20px;">No signs found.</p>`;
+        return;
+    }
+
+    data.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        
+        const title = currentLang === 'en' ? item.enTitle : item.hiTitle;
+        const category = currentLang === 'en' ? item.enCat : item.hiCat;
+        const desc = currentLang === 'en' ? item.enDesc : item.hiDesc;
+
+        card.innerHTML = `
+            <div class="card-icon">${item.icon}</div>
+            <h3>${title}</h3>
+            <span>${category}</span>
+        `;
+        
+        card.addEventListener('click', () => {
+            modalEmoji.textContent = item.icon;
+            modalTitle.textContent = title;
+            modalCategory.textContent = category;
+            modalDesc.textContent = desc;
+            cardModal.style.display = 'flex';
+        });
+
+        cardGrid.appendChild(card);
+    });
+}
+
+function filterAndRender() {
+    const query = searchInput ? searchInput.value.toLowerCase() : '';
+    
+    const filteredData = signData.filter(item => {
+        const matchesCategory = (activeCategory === 'all' || item.enCat === activeCategory);
+        const matchesSearch = (
+            item.enTitle.toLowerCase().includes(query) || 
+            item.hiTitle.toLowerCase().includes(query) || 
+            item.enCat.toLowerCase().includes(query) || 
+            item.hiCat.toLowerCase().includes(query)
+        );
+        return matchesCategory && matchesSearch;
+    });
+
+    renderCards(filteredData);
+}
+
+// Initial Render on Load
+document.addEventListener('DOMContentLoaded', () => {
+    filterAndRender();
+});
+
+// Welcome Modal Controls
+if (closeWelcome) {
+    closeWelcome.addEventListener('click', () => {
+        welcomeModal.style.display = 'none';
+    });
+}
+
+if (gotItBtn) {
+    gotItBtn.addEventListener('click', () => {
+        welcomeModal.style.display = 'none';
+    });
+}
+
+// Tab Click Events
+tabButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        activeCategory = e.target.getAttribute('data-cat');
+        filterAndRender();
+    });
+});
+
+// Language Toggle
+if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'hi' : 'en';
+        langToggleBtn.textContent = currentLang === 'en' ? 'HI / EN' : 'EN / HI';
+        if (searchInput) {
+            searchInput.placeholder = currentLang === 'en' ? "Search signs..." : "संकेत खोजें...";
+        }
+        filterAndRender();
+    });
+}
+
+// Search Input Event
+if (searchInput) {
+    searchInput.addEventListener('input', () => {
+        filterAndRender();
+    });
+}
+
+// Modal Controls
+if (closeModal) closeModal.addEventListener('click', () => cardModal.style.display = 'none');
+if (closeRequestModal) closeRequestModal.addEventListener('click', () => requestModal.style.display = 'none');
+if (openRequestModalBtn) openRequestModalBtn.addEventListener('click', () => requestModal.style.display = 'flex');
+
+window.addEventListener('click', (e) => {
+    if (e.target === cardModal) cardModal.style.display = 'none';
+    if (e.target === requestModal) requestModal.style.display = 'none';
+    if (e.target === welcomeModal) welcomeModal.style.display = 'none';
+});
