@@ -1,40 +1,52 @@
-const CACHE_NAME = 'ishare-v3'; // Upgraded version for new assets
-const assets = [
-  './',
-  './index.html',
-  './style.css',
-  './app.js',
-  './manifest.json',
-  './icon-192.png'
+// --- ISHAARE SERVICE WORKER (v4 - Auto Update & Network First) ---
+const CACHE_NAME = 'ishare-v4';
+const assetsToCache = [
+    './',
+    './index.html',
+    './style.css',
+    './app.js',
+    './manifest.json',
+    './icon-192.png'
 ];
 
-self.addEventListener('install', (e) => {
-  self.skipWaiting();
-  e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(assets);
-    })
-  );
-});
-
-self.addEventListener('activate', (e) => {
-  e.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
+// Install Event
+self.addEventListener('install', (event) => {
+    self.skipWaiting();
+    event.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => {
+            return cache.addAll(assetsToCache);
         })
-      );
-    })
-  );
+    );
 });
 
-self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    caches.match(e.request).then((response) => {
-      return response || fetch(e.request);
-    })
-  );
+// Activate Event - Clean up old versions instantly
+self.addEventListener('activate', (event) => {
+    event.waitUntil(
+        caches.keys().then((keys) => {
+            return Promise.all(
+                keys.map((key) => {
+                    if (key !== CACHE_NAME) {
+                        return caches.delete(key);
+                    }
+                })
+            );
+        }).then(() => {
+            return self.clients.claim();
+        })
+    );
+});
+
+// Fetch Event - Network First (Always tries to fetch fresh code first, falls back to cache if offline)
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+        fetch(event.request)
+            .then((response) => {
+                // If network fetch succeeds, return it fresh
+                return response;
+            })
+            .catch(() => {
+                // If offline, fallback to cached version
+                return caches.match(event.request);
+            })
+    );
 });
