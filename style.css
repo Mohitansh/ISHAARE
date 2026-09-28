@@ -134,8 +134,9 @@ header {
     border-color: var(--primary-color);
 }
 
-/* Modals */
+/* Modals Default Hidden */
 .modal {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -146,6 +147,11 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+}
+
+/* Active Modal Show */
+.modal.active {
+    display: flex;
 }
 
 .modal-content {

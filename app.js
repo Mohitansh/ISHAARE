@@ -1,4 +1,4 @@
-// --- ISHARE APP: FINAL MERGED CODE ---
+// --- ISHAARE APP: FINAL MERGED CODE ---
 
 const aslUniversalData = [
     {
@@ -184,7 +184,7 @@ function openDetailModal(id) {
         }
     }
 
-    detailModal.style.display = 'flex';
+    detailModal.classList.add('active');
 }
 
 function setupEventListeners() {
@@ -202,29 +202,37 @@ function setupEventListeners() {
         });
     });
 
-    // Welcome Modal Closing logic (Fixed)
+    // Welcome Modal Closing logic (Safe .active toggle)
     const closeWelcomePopup = () => {
-        if (welcomeModal) welcomeModal.style.display = 'none';
+        if (welcomeModal) {
+            welcomeModal.classList.remove('active');
+            welcomeModal.style.display = 'none';
+        }
     };
     if (closeWelcome) closeWelcome.addEventListener('click', closeWelcomePopup);
     if (gotItBtn) gotItBtn.addEventListener('click', closeWelcomePopup);
 
     // Detail Modal Closing
-    if (closeModalBtn) closeModalBtn.addEventListener('click', () => detailModal.style.display = 'none');
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => detailModal.classList.remove('active'));
+    }
 
     // Request Modal Open/Close
     if (openRequestModalBtn && requestModal) {
-        openRequestModalBtn.addEventListener('click', () => requestModal.style.display = 'flex');
+        openRequestModalBtn.addEventListener('click', () => requestModal.classList.add('active'));
     }
     if (closeRequestModal && requestModal) {
-        closeRequestModal.addEventListener('click', () => requestModal.style.display = 'none');
+        closeRequestModal.addEventListener('click', () => requestModal.classList.remove('active'));
     }
 
     // Window click outside modals to close
     window.addEventListener('click', (e) => {
-        if (e.target === detailModal) detailModal.style.display = 'none';
-        if (e.target === requestModal) requestModal.style.display = 'none';
-        if (e.target === welcomeModal) welcomeModal.style.display = 'none';
+        if (e.target === detailModal) detailModal.classList.remove('active');
+        if (e.target === requestModal) requestModal.classList.remove('active');
+        if (e.target === welcomeModal) {
+            welcomeModal.classList.remove('active');
+            welcomeModal.style.display = 'none';
+        }
     });
 }
 

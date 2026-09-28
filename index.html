@@ -54,8 +54,8 @@
         </footer>
     </div>
 
-    <!-- Welcome / How to Use Popup Modal (Fixed display logic) -->
-    <div id="welcomeModal" class="modal" style="display: flex;">
+    <!-- Welcome / How to Use Popup Modal (Using .active class for safe closing) -->
+    <div id="welcomeModal" class="modal active">
         <div class="modal-content welcome-popup">
             <span id="closeWelcome" class="close-btn">&times;</span>
             <div class="modal-emoji">🙏🏻</div>
@@ -74,7 +74,7 @@
     </div>
 
     <!-- Fullscreen Detail Modal -->
-    <div id="detailModal" class="modal" style="display: none;">
+    <div id="detailModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeModalBtn">&times;</span>
             <h2 id="modalTitle">Title</h2>
@@ -85,7 +85,7 @@
     </div>
 
     <!-- Request New Sign Modal -->
-    <div id="requestModal" class="modal" style="display: none;">
+    <div id="requestModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeRequestModal">&times;</span>
             <h2>Request a New Sign</h2>
