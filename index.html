@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#4f46e5">
     <link rel="apple-touch-icon" href="icon-192.png">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,31 +24,26 @@
             <p class="tagline">Visual signs & concept reference for educators</p>
         </header>
 
-        <!-- Controls Row: Search, Language Toggle, Request Button -->
+        <!-- Controls Row: Search, Language Toggle, Mode Toggle, Request Button -->
         <div class="controls-row">
             <input type="text" id="searchInput" placeholder="Search signs..." autocomplete="off">
-            <button id="langToggleBtn" class="action-btn">HI / EN</button>
+            <button id="langToggleBtn" class="action-btn">🇮🇳 हिंदी / EN</button>
             <button id="modeToggleBtn" class="action-btn" style="background: #1976d2; color: white; font-weight: 600;">🔵 ASL Mode</button>
             <button id="openRequestModalBtn" class="action-btn request-btn" title="Request a Sign">?</button>
         </div>
 
         <!-- Category Filter Tabs -->
         <div class="category-tabs">
-            <button class="tab-btn active" data-cat="all">All</button>
-            <button class="tab-btn" data-cat="English A-Z">English A-Z</button>
-            <button class="tab-btn" data-cat="Hindi Varnmala">हिंदी वर्णमाला</button>
-            <button class="tab-btn" data-cat="Counting">Counting</button>
-            <button class="tab-btn" data-cat="Daily Use">Daily Use</button>
-            <button class="tab-btn" data-cat="Pronouns">Pronouns</button>
-            <button class="tab-btn" data-cat="Greetings">Greetings</button>
-            <button class="tab-btn" data-cat="Questions">Questions</button>
-            <button class="tab-btn" data-cat="Emotions & Desires">Emotions</button>
-            <button class="tab-btn" data-cat="Colors">Colors</button>
-            <button class="tab-btn" data-cat="Academics">Academics</button>
+            <button class="tab-btn active" data-category="all">All</button>
+            <button class="tab-btn" data-category="alphabet">English A-Z</button>
+            <button class="tab-btn" data-category="hindi">हिंदी वर्णमाला</button>
+            <button class="tab-btn" data-category="counting">Counting</button>
+            <button class="tab-btn" data-category="daily">Daily Use</button>
+            <button class="tab-btn" data-category="emotions">Emotions</button>
         </div>
 
         <!-- Cards Grid Container -->
-        <main id="cardGrid" class="grid-container">
+        <main id="cardsGrid" class="grid-container">
             <!-- Dynamic Cards -->
         </main>
 
@@ -59,7 +54,7 @@
         </footer>
     </div>
 
-    <!-- Welcome / How to Use & Suggestion Popup Modal -->
+    <!-- Welcome / How to Use Popup Modal (Fixed display logic) -->
     <div id="welcomeModal" class="modal" style="display: flex;">
         <div class="modal-content welcome-popup">
             <span id="closeWelcome" class="close-btn">&times;</span>
@@ -69,14 +64,9 @@
             
             <div class="instruction-box">
                 <h4>📖 How to Use:</h4>
-                <p>1. <strong>Tabs</strong> par click karke category select karein (A-Z, हिंदी वर्णमाला, Counting).</p>
+                <p>1. <strong>Tabs</strong> par click karke category select karein.</p>
                 <p>2. <strong>Search Bar</strong> mein direct koi bhi word ya letter type karein.</p>
                 <p>3. <strong>Card</strong> par click karke uska detailed gesture aur <strong>Educator Notes</strong> dekhein.</p>
-            </div>
-
-            <div class="instruction-box suggestion-box">
-                <h4>💡 Suggestions & Requests:</h4>
-                <p>Agar aapko koi naya sign chahiye jo list mein nahi hai, toh upar diye gaye <strong>[?]</strong> button par click karke apne suggestions/requests direct humein bhej sakte hain!</p>
             </div>
 
             <button id="gotItBtn" class="submit-btn">Got it, Let's Start!</button>
@@ -84,29 +74,26 @@
     </div>
 
     <!-- Fullscreen Detail Modal -->
-    <div id="cardModal" class="modal">
+    <div id="detailModal" class="modal" style="display: none;">
         <div class="modal-content">
-            <span class="close-btn" id="closeModal">&times;</span>
-            <div class="modal-emoji" id="modalEmoji">📚</div>
+            <span class="close-btn" id="closeModalBtn">&times;</span>
             <h2 id="modalTitle">Title</h2>
             <p id="modalCategory" class="modal-cat">Category</p>
             <p id="modalDesc" class="modal-desc">Description goes here...</p>
-            
-            <!-- Educator Notes Box for Special Educators & Government Proposals -->
             <div id="educatorNoteBox" class="educator-note-box" style="display: none;"></div>
         </div>
     </div>
 
     <!-- Request New Sign Modal -->
-    <div id="requestModal" class="modal">
+    <div id="requestModal" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="close-btn" id="closeRequestModal">&times;</span>
             <h2>Request a New Sign</h2>
-            <p class="modal-sub">Koi sign ya suggestion dena hai? Humein batayein, hum jald add karenge!</p>
+            <p class="modal-sub">Koi sign ya suggestion dena hai? Humein batayein!</p>
             <form id="requestSignForm" action="https://formspree.io/f/anshraghav990@gmail.com" method="POST">
                 <input type="text" name="requester_name" placeholder="Your Name / School Name" required>
-                <input type="text" name="sign_name" placeholder="Which sign or suggestion do you have?" required>
-                <textarea name="sign_details" placeholder="Describe the idea or gesture..." required></textarea>
+                <input type="text" name="sign_name" placeholder="Which sign or suggestion?" required>
+                <textarea name="sign_details" placeholder="Describe the idea..." required></textarea>
                 <button type="submit" class="submit-btn">Send Request</button>
             </form>
         </div>
@@ -114,12 +101,9 @@
 
     <script src="app.js"></script>
     <script>
-        // Register Service Worker for 100% Offline Capability
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(reg => console.log('Service Worker registered successfully!', reg.scope))
-                    .catch(err => console.log('Service Worker registration failed:', err));
+                navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW registration failed:', err));
             });
         }
     </script>

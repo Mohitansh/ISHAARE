@@ -1,6 +1,5 @@
-// --- ISHARE APP: FULL MERGED CODE WITH DUAL-MODE & EMOJIS ---
+// --- ISHARE APP: FINAL MERGED CODE ---
 
-// 1. ASL / Universal Dataset (Purana Data)
 const aslUniversalData = [
     {
         id: 'alpha-a',
@@ -40,7 +39,6 @@ const aslUniversalData = [
     }
 ];
 
-// 2. Official ISL Dataset (Naya Mode Data)
 const islOfficialData = [
     {
         id: 'isl-a',
@@ -68,9 +66,8 @@ const islOfficialData = [
     }
 ];
 
-// State variables
-let currentMode = 'asl'; // 'asl' or 'isl'
-let currentLang = 'en';  // 'en' or 'hi'
+let currentMode = 'asl';
+let currentLang = 'en';
 let activeCategory = 'all';
 
 // DOM Elements
@@ -78,9 +75,13 @@ const searchInput = document.getElementById('searchInput');
 const cardsGrid = document.getElementById('cardsGrid');
 const langToggleBtn = document.getElementById('langToggleBtn');
 const modeToggleBtn = document.getElementById('modeToggleBtn');
-const categoryBtns = document.querySelectorAll('.category-btn');
+const tabBtns = document.querySelectorAll('.tab-btn');
 
-// Modal Elements
+// Modals
+const welcomeModal = document.getElementById('welcomeModal');
+const closeWelcome = document.getElementById('closeWelcome');
+const gotItBtn = document.getElementById('gotItBtn');
+
 const detailModal = document.getElementById('detailModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
 const modalTitle = document.getElementById('modalTitle');
@@ -88,18 +89,19 @@ const modalCategory = document.getElementById('modalCategory');
 const modalDesc = document.getElementById('modalDesc');
 const educatorNoteBox = document.getElementById('educatorNoteBox');
 
-// Initialize App
+const requestModal = document.getElementById('requestModal');
+const openRequestModalBtn = document.getElementById('openRequestModalBtn');
+const closeRequestModal = document.getElementById('closeRequestModal');
+
 function initApp() {
     renderCards();
     setupEventListeners();
 }
 
-// Get active dataset based on mode
 function getActiveDataset() {
     return currentMode === 'isl' ? islOfficialData : aslUniversalData;
 }
 
-// Render Cards
 function renderCards() {
     cardsGrid.innerHTML = '';
     const dataset = getActiveDataset();
@@ -113,7 +115,7 @@ function renderCards() {
     });
 
     if (filtered.length === 0) {
-        cardsGrid.innerHTML = `<div class="no-results" style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666;">🔍 ${currentLang === 'en' ? 'No signs found.' : 'Koi sign nahi mila.'}</div>`;
+        cardsGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #64748b;">🔍 ${currentLang === 'en' ? 'No signs found.' : 'Koi sign nahi mila.'}</div>`;
         return;
     }
 
@@ -125,38 +127,37 @@ function renderCards() {
         const desc = currentLang === 'en' ? item.descEn : item.hiDescEn;
 
         card.innerHTML = `
-            <div class="card-header" style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                <span class="badge" style="background: ${currentMode === 'isl' ? '#2e7d32' : '#1976d2'}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px;">✨ ${currentMode.toUpperCase()}</span>
-                <span class="category-tag" style="font-size: 12px; color: #666; font-weight: 500;">🏷️ ${item.category.toUpperCase()}</span>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <span style="background: ${currentMode === 'isl' ? '#2e7d32' : '#4f46e5'}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight:600;">✨ ${currentMode.toUpperCase()}</span>
+                <span style="font-size: 12px; color: #64748b; font-weight: 500;">🏷️ ${item.category.toUpperCase()}</span>
             </div>
-            <h3 style="margin-bottom: 8px; font-size: 18px;">📖 ${title}</h3>
-            <p style="color: #444; font-size: 14px; margin-bottom: 15px;">💬 ${desc}</p>
-            <button class="view-details-btn" onclick="openDetailModal('${item.id}')" style="width: 100%; padding: 8px; background: #f0f4f8; border: 1px solid #d1d9e0; border-radius: 6px; cursor: pointer; font-weight: 500;">👁️ ${currentLang === 'en' ? 'View Details & Notes' : 'विवरण और नोट्स देखें'}</button>
+            <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #1e293b;">📖 ${title}</h3>
+            <p style="color: #475569; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">💬 ${desc}</p>
+            <div style="font-size: 13px; color: var(--primary-color); font-weight: 600;">👁️ ${currentLang === 'en' ? 'View Details & Notes →' : 'विवरण और नोट्स देखें →'}</div>
         `;
+        
+        card.addEventListener('click', () => openDetailModal(item.id));
         cardsGrid.appendChild(card);
     });
 }
 
-// Toggle Language
 function toggleLanguage() {
     currentLang = currentLang === 'en' ? 'hi' : 'en';
     if (langToggleBtn) {
-        langToggleBtn.textContent = currentLang === 'en' ? '🇮🇳 हिंदी' : '🇬🇧 English';
+        langToggleBtn.textContent = currentLang === 'en' ? '🇮🇳 हिंदी / EN' : '🇬🇧 English / HI';
     }
     renderCards();
 }
 
-// Toggle Mode (ASL vs ISL)
 function toggleMode() {
     currentMode = currentMode === 'asl' ? 'isl' : 'asl';
     if (modeToggleBtn) {
-        modeToggleBtn.textContent = currentMode === 'isl' ? '🟢 Mode: ISL (Official)' : '🔵 Mode: ASL / Universal';
+        modeToggleBtn.textContent = currentMode === 'isl' ? '🟢 ISL Mode' : '🔵 ASL Mode';
         modeToggleBtn.style.background = currentMode === 'isl' ? '#2e7d32' : '#1976d2';
     }
     renderCards();
 }
 
-// Open Detail Modal
 function openDetailModal(id) {
     const dataset = getActiveDataset();
     const item = dataset.find(i => i.id === id);
@@ -166,7 +167,6 @@ function openDetailModal(id) {
     if (modalCategory) modalCategory.textContent = `🏷️ Category: ${item.category.toUpperCase()} (${currentMode.toUpperCase()})`;
     if (modalDesc) modalDesc.textContent = `💬 ${currentLang === 'en' ? item.descEn : item.hiDescEn}`;
 
-    // Bilingual Educator Notes & Curriculum Grade Level
     const gradeText = currentLang === 'en' ? item.grade : (item.hiGrade || item.grade);
     const noteText = currentLang === 'en' ? item.educatorNote : (item.hiEducatorNote || item.educatorNote);
     const gradeLabel = currentLang === 'en' ? "🎯 Curriculum / Grade:" : "🎯 पाठ्यक्रम / कक्षा:";
@@ -177,7 +177,7 @@ function openDetailModal(id) {
             educatorNoteBox.style.display = 'block';
             educatorNoteBox.innerHTML = `
                 <p style="margin-bottom: 8px;"><strong>${gradeLabel}</strong> ${gradeText}</p>
-                <p><strong>${noteLabel}</strong> ${noteText}</p>
+                <p style="margin: 0;"><strong>${noteLabel}</strong> ${noteText}</p>
             `;
         } else {
             educatorNoteBox.style.display = 'none';
@@ -187,33 +187,45 @@ function openDetailModal(id) {
     detailModal.style.display = 'flex';
 }
 
-// Close Modal Functions
-function closeModal() {
-    if (detailModal) detailModal.style.display = 'none';
-}
-
-// Setup Event Listeners
 function setupEventListeners() {
     if (searchInput) searchInput.addEventListener('input', renderCards);
     if (langToggleBtn) langToggleBtn.addEventListener('click', toggleLanguage);
     if (modeToggleBtn) modeToggleBtn.addEventListener('click', toggleMode);
 
-    // Category Buttons Filtering
-    categoryBtns.forEach(btn => {
+    // Category Tabs
+    tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            categoryBtns.forEach(b => b.classList.remove('active'));
+            tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             activeCategory = btn.getAttribute('data-category');
             renderCards();
         });
     });
 
-    // Modal Close Listeners
-    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    // Welcome Modal Closing logic (Fixed)
+    const closeWelcomePopup = () => {
+        if (welcomeModal) welcomeModal.style.display = 'none';
+    };
+    if (closeWelcome) closeWelcome.addEventListener('click', closeWelcomePopup);
+    if (gotItBtn) gotItBtn.addEventListener('click', closeWelcomePopup);
+
+    // Detail Modal Closing
+    if (closeModalBtn) closeModalBtn.addEventListener('click', () => detailModal.style.display = 'none');
+
+    // Request Modal Open/Close
+    if (openRequestModalBtn && requestModal) {
+        openRequestModalBtn.addEventListener('click', () => requestModal.style.display = 'flex');
+    }
+    if (closeRequestModal && requestModal) {
+        closeRequestModal.addEventListener('click', () => requestModal.style.display = 'none');
+    }
+
+    // Window click outside modals to close
     window.addEventListener('click', (e) => {
-        if (e.target === detailModal) closeModal();
+        if (e.target === detailModal) detailModal.style.display = 'none';
+        if (e.target === requestModal) requestModal.style.display = 'none';
+        if (e.target === welcomeModal) welcomeModal.style.display = 'none';
     });
 }
 
-// Run on window load
 window.onload = initApp;
