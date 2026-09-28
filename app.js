@@ -1,4 +1,4 @@
-// --- ISHAARE APP: FINAL MERGED CODE ---
+// --- ISHAARE APP: FINAL CORE LOGIC ---
 
 const aslUniversalData = [
     {
@@ -79,9 +79,6 @@ const tabBtns = document.querySelectorAll('.tab-btn');
 
 // Modals
 const welcomeModal = document.getElementById('welcomeModal');
-const closeWelcome = document.getElementById('closeWelcome');
-const gotItBtn = document.getElementById('gotItBtn');
-
 const detailModal = document.getElementById('detailModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
 const modalTitle = document.getElementById('modalTitle');
@@ -202,16 +199,6 @@ function setupEventListeners() {
         });
     });
 
-    // Welcome Modal Closing logic (Safe .active toggle)
-    const closeWelcomePopup = () => {
-        if (welcomeModal) {
-            welcomeModal.classList.remove('active');
-            welcomeModal.style.display = 'none';
-        }
-    };
-    if (closeWelcome) closeWelcome.addEventListener('click', closeWelcomePopup);
-    if (gotItBtn) gotItBtn.addEventListener('click', closeWelcomePopup);
-
     // Detail Modal Closing
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', () => detailModal.classList.remove('active'));
@@ -229,10 +216,6 @@ function setupEventListeners() {
     window.addEventListener('click', (e) => {
         if (e.target === detailModal) detailModal.classList.remove('active');
         if (e.target === requestModal) requestModal.classList.remove('active');
-        if (e.target === welcomeModal) {
-            welcomeModal.classList.remove('active');
-            welcomeModal.style.display = 'none';
-        }
     });
 }
 

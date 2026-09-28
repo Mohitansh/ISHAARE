@@ -54,10 +54,10 @@
         </footer>
     </div>
 
-    <!-- Welcome / How to Use Popup Modal (Using .active class for safe closing) -->
-    <div id="welcomeModal" class="modal active">
+    <!-- Welcome / How to Use Popup Modal (Bulletproof Direct Inline Close) -->
+    <div id="welcomeModal" class="modal active" style="display: flex;">
         <div class="modal-content welcome-popup">
-            <span id="closeWelcome" class="close-btn">&times;</span>
+            <span id="closeWelcome" class="close-btn" onclick="document.getElementById('welcomeModal').style.display='none'; document.getElementById('welcomeModal').classList.remove('active');">&times;</span>
             <div class="modal-emoji">🙏🏻</div>
             <h2>Namaste! Welcome to ISHAARE</h2>
             <p class="modal-sub">Inclusive Classroom Utility & Sign Reference</p>
@@ -69,7 +69,7 @@
                 <p>3. <strong>Card</strong> par click karke uska detailed gesture aur <strong>Educator Notes</strong> dekhein.</p>
             </div>
 
-            <button id="gotItBtn" class="submit-btn">Got it, Let's Start!</button>
+            <button id="gotItBtn" class="submit-btn" onclick="document.getElementById('welcomeModal').style.display='none'; document.getElementById('welcomeModal').classList.remove('active');">Got it, Let's Start!</button>
         </div>
     </div>
 
