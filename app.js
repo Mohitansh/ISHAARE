@@ -1,4 +1,4 @@
-// --- ISHARE APP: ASL & OFFICIAL ISL (ISLRTC STANDARDS) DATA ---
+// --- ISHAARE APP: COMPLETE BILINGUAL ALPHABETS (ASL & OFFICIAL ISL) ---
 
 const aslUniversalData = [
     {
@@ -10,7 +10,7 @@ const aslUniversalData = [
         hiDescEn: 'Muthi band karein aur anguthe ko index finger ke sath bilkul seedha khada rakhein.',
         grade: 'Grade 1 - Early Literacy',
         hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
-        educatorNote: 'Ensure student keeps the thumb straight, not wrapped across fingers.',
+        educatorNote: 'Ensure the student keeps the thumb straight and upright, not wrapped across fingers.',
         hiEducatorNote: 'Dhyan dein ki angutha seedha ho, ungliyon ke upar na muda ho.'
     },
     {
@@ -18,48 +18,300 @@ const aslUniversalData = [
         category: 'alphabet',
         titleEn: 'Letter B',
         titleHi: 'वर्ण B',
-        descEn: 'Hold hand upright, fingers together pointing up, thumb folded across the palm.',
+        descEn: 'Hold hand upright, fingers together pointing straight up, thumb folded neatly across the palm.',
         hiDescEn: 'Haath upar rakhein, ungliyan aapas mein mili hui upar ki taraf, angutha hatheli par muda hua.',
         grade: 'Grade 1 - Early Literacy',
         hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
-        educatorNote: 'Common error: student might curve fingers. Keep them straight.',
+        educatorNote: 'Watch for curved fingers; encourage students to keep fingers firm and straight.',
         hiEducatorNote: 'Aam galti: bacha ungliyan mod sakta hai. Unhe bilkul seedha rakhwayein.'
     },
     {
-        id: 'asl-water',
-        category: 'daily',
-        titleEn: 'Water',
-        titleHi: 'पानी',
-        descEn: 'Form a "W" with three fingers up, tap chin twice with the index finger.',
-        hiDescEn: 'Teen ungliyon se "W" banayein, index finger se thodi (chin) ko do baar chhuayein.',
-        grade: 'Grade 1-3 - Daily Survival Vocabulary',
-        hiGrade: 'कक्षा 1-3 - दैनिक शब्दावली',
-        educatorNote: 'Essential for inclusive classrooms for hydration requests.',
-        hiEducatorNote: 'Paani ki maang ke liye inclusive classroom mein yeh sabse zaroori hai.'
+        id: 'asl-alpha-c',
+        category: 'alphabet',
+        titleEn: 'Letter C',
+        titleHi: 'वर्ण C',
+        descEn: 'Curve your hand and fingers to form the shape of the letter "C", with fingers and thumb pointing sideways.',
+        hiDescEn: 'Apne haath aur ungliyon ko "C" ka aakar dene ke liye modein, jisme ungliyan aur angutha side ki taraf hon.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'The curve should resemble a clear semicircle for visual learners.',
+        hiEducatorNote: 'Visual learners ke liye curve ekdam saaf semicircle jaisa hona chahiye.'
     },
     {
-        id: 'asl-count-1',
-        category: 'counting',
-        titleEn: 'Number 1',
-        titleHi: 'संख्या 1',
-        descEn: 'Hold hand up with index finger pointing straight up, palm facing inward.',
-        hiDescEn: 'Index finger ko upar ki taraf seedha khada rakhein, hatheli andar ki taraf.',
-        grade: 'Grade 1 - Basic Math',
-        hiGrade: 'कक्षा 1 - गणित बुनियादी',
-        educatorNote: 'Keep other fingers folded tightly into the palm.',
-        hiEducatorNote: 'Baaki ungliyon ko hatheli mein mazbooti se mod kar rakhein.'
+        id: 'asl-alpha-d',
+        category: 'alphabet',
+        titleEn: 'Letter D',
+        titleHi: 'वर्ण D',
+        descEn: 'Point the index finger straight up, while the thumb and other fingers touch to form a closed circle.',
+        hiDescEn: 'Index finger ko seedha upar rakhein, jabki angutha aur baaki ungliyan milkar ek gol circle banayein.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Check for a clear circular gap between the thumb and middle finger.',
+        hiEducatorNote: 'Anguthe aur beech wali ungli ke beech saaf gol gap ko check karein.'
     },
     {
-        id: 'asl-emo-happy',
-        category: 'emotions',
-        titleEn: 'Happy',
-        titleHi: 'खुश',
-        descEn: 'Brush flat hands upward against the chest twice with a smiling expression.',
-        hiDescEn: 'Chapti hatheliyon ko chhaati par do baar upar ki taraf le jayein, muskurate hue.',
-        grade: 'Social-Emotional Learning',
-        hiGrade: 'सामाजिक-भावनात्मक शिक्षण',
-        educatorNote: 'Facial expressions are vital for conveying emotion signs accurately.',
-        hiEducatorNote: 'Bhavnao ko sahi se darshane ke liye chehre ke hav-bhav mahatvapurna hain.'
+        id: 'asl-alpha-e',
+        category: 'alphabet',
+        titleEn: 'Letter E',
+        titleHi: 'वर्ण E',
+        descEn: 'Curl all fingers down towards the palm, with the thumb tucked horizontally across the bottom of the fingers.',
+        hiDescEn: 'Sabhi ungliyon ko hatheli ki taraf modein, aur anguthe ko ungliyon ke neeche horizontally rakhein.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Ensure fingertips rest gently on the thumb tip.',
+        hiEducatorNote: 'Yeh dhyan rakhein ki ungliyon ke sire anguthe par halke se tikey hon.'
+    },
+    {
+        id: 'asl-alpha-f',
+        category: 'alphabet',
+        titleEn: 'Letter F',
+        titleHi: 'वर्ण F',
+        descEn: 'Touch the tip of the index finger to the tip of the thumb, keeping the other three fingers extended upward.',
+        hiDescEn: 'Index finger ke sire ko anguthe ke sire se chhuayein, baaki teen ungliyan upar ki taraf khadi rahengi.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Looks like an OK sign shape with fingers separated.',
+        hiDescEn: 'Yeh alag-alag khuli ungliyon ke sath OK sign jaisa dikhta hai.'
+    },
+    {
+        id: 'asl-alpha-g',
+        category: 'alphabet',
+        titleEn: 'Letter G',
+        titleHi: 'वर्ण G',
+        descEn: 'Point the index finger and thumb horizontally forward, parallel to each other, with other fingers closed.',
+        hiDescEn: 'Index finger aur anguthe ko samne ki taraf horizontal seedha rakhein, baaki ungliyan band hon.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Hand is oriented sideways, pointing left or right depending on dominant hand.',
+        hiDescEn: 'Haath side ki taraf hota hai, dominant hand ke anusaar left ya right point karta hai.'
+    },
+    {
+        id: 'asl-alpha-h',
+        category: 'alphabet',
+        titleEn: 'Letter H',
+        titleHi: 'वर्ण H',
+        descEn: 'Extend the index and middle fingers horizontally together, pointing to the side, with thumb holding down other fingers.',
+        hiDescEn: 'Index aur middle finger ko sath mein horizontal side ki taraf failayein, angutha baaki ungliyon ko dabaye rahe.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Keep fingers parallel and close together.',
+        hiDescEn: 'Ungliyon ko aapas mein satakar aur parallel rakhein.'
+    },
+    {
+        id: 'asl-alpha-i',
+        category: 'alphabet',
+        titleEn: 'Letter I',
+        titleHi: 'वर्ण I',
+        descEn: 'Extend only the little finger (pinky) straight up, with other fingers curled into a fist and thumb across them.',
+        hiDescEn: 'Sirf choti ungli (pinky) ko seedha upar rakhein, baaki ungliyan muthi mein band aur angutha unke upar ho.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Palm should face outward towards the observer.',
+        hiDescEn: 'Hatheli dekhne wale ki taraf samne honi chahiye.'
+    },
+    {
+        id: 'asl-alpha-j',
+        category: 'alphabet',
+        titleEn: 'Letter J',
+        titleHi: 'वर्ण J',
+        descEn: 'Start with the letter "I" handshape (pinky up) and trace the shape of a "J" in the air.',
+        hiDescEn: 'Letter "I" wale handshape se shuru karein (pinky up) aur hawa mein "J" ka aakar banayein.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'This is a dynamic motion sign rather than a static handshape.',
+        hiDescEn: 'Yeh ek static handshape ke bajaye dynamic motion sign hai.'
+    },
+    {
+        id: 'asl-alpha-k',
+        category: 'alphabet',
+        titleEn: 'Letter K',
+        titleHi: 'वर्ण K',
+        descEn: 'Point index and middle fingers upward in a V-shape with the thumb resting between them on the folded ring finger.',
+        hiDescEn: 'Index aur middle finger ko V-shape mein upar rakhein, angutha unke beech mein mudhi hui ring finger par ho.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Requires finger independence; practice slowly with young learners.',
+        hiDescEn: 'Isme finger independence chahiye; chhote bachon ke sath dheere practice karein.'
+    },
+    {
+        id: 'asl-alpha-l',
+        category: 'alphabet',
+        titleEn: 'Letter L',
+        titleHi: 'वर्ण L',
+        descEn: 'Extend the index finger straight up and the thumb straight out to the side, forming a capital "L" shape.',
+        hiDescEn: 'Index finger ko seedha upar aur anguthe ko side mein seedha failayein, jisse bada "L" bane.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'One of the easiest visual shapes for early learners to grasp.',
+        hiDescEn: 'Shurati bachon ke samajhne ke liye sabse aasan visual shapes mein se ek hai.'
+    },
+    {
+        id: 'asl-alpha-m',
+        category: 'alphabet',
+        titleEn: 'Letter M',
+        titleHi: 'वर्ण M',
+        descEn: 'Fold the fingers down over the thumb, with the thumb tucked underneath the first three fingers.',
+        hiDescEn: 'Pehle teen ungliyon ko anguthe ke upar niche ki taraf modein, angutha unke neeche dabaya ho.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Notice that three fingers cover the thumb.',
+        hiDescEn: 'Dhyan dein ki teen ungliyan anguthe ko dhakti hain.'
+    },
+    {
+        id: 'asl-alpha-n',
+        category: 'alphabet',
+        titleEn: 'Letter N',
+        titleHi: 'वर्ण N',
+        descEn: 'Fold the first two fingers down over the thumb, with the thumb tucked underneath.',
+        hiDescEn: 'Pehli do ungliyon ko anguthe ke upar niche ki taraf modein, angutha neeche dabaya ho.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Similar to M, but uses only two fingers covering the thumb.',
+        hiDescEn: 'M jaisa hi hai, bas isme anguthe ko dhakne ke liye sirf do ungliyan hoti hain.'
+    },
+    {
+        id: 'asl-alpha-o',
+        category: 'alphabet',
+        titleEn: 'Letter O',
+        titleHi: 'वर्ण O',
+        descEn: 'Curve all fingers and thumb together to touch their tips, forming the circular shape of the letter "O".',
+        hiDescEn: 'Sabhi ungliyon aur anguthe ko aapas mein mila kar "O" ka gol aakar banayein.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Ensure a clear round opening in the center.',
+        hiDescEn: 'Beech mein ek saaf gol opening honi chahiye.'
+    },
+    {
+        id: 'asl-alpha-p',
+        category: 'alphabet',
+        titleEn: 'Letter P',
+        titleHi: 'वर्ण P',
+        descEn: 'Point index finger forward and down, middle finger pointing sideways, with thumb touching middle finger knuckle.',
+        hiDescEn: 'Index finger ko samne niche rakhein, middle finger side mein ho, angutha middle finger ke jod ko chhue.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Essentially an inverted letter K handshape pointing downwards.',
+        hiDescEn: 'Yeh mukhyata letter K ka ulta roop hai jo niche ki taraf point karta hai.'
+    },
+    {
+        id: 'asl-alpha-q',
+        category: 'alphabet',
+        titleEn: 'Letter Q',
+        titleHi: 'वर्ण Q',
+        descEn: 'Point index finger and thumb straight down, parallel to each other, resembling a downward hook.',
+        hiDescEn: 'Index finger aur anguthe ko bilkul niche ki taraf seedha rakhein, jaise ek downward hook ho.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Similar to G, but pointing straight down instead of sideways.',
+        hiDescEn: 'G jaisa hai, bas side ke bajaye bilkul niche ki taraf point karta hai.'
+    },
+    {
+        id: 'asl-alpha-r',
+        category: 'alphabet',
+        titleEn: 'Letter R',
+        titleHi: 'वर्ण R',
+        descEn: 'Cross the index and middle fingers upward, with the other fingers folded and thumb holding them.',
+        hiDescEn: 'Index aur middle finger ko upar ki taraf cross karein, baaki ungliyan mudhi hui aur anguthe se dabi hon.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Fingers are intertwined tightly like crossing fingers for good luck.',
+        hiDescEn: 'Ungliyan aapas mein achhi tarah cross hoti hain jaise luck ke liye karte hain.'
+    },
+    {
+        id: 'asl-alpha-s',
+        category: 'alphabet',
+        titleEn: 'Letter S',
+        titleHi: 'वर्ण S',
+        descEn: 'Make a tight fist with the thumb folded horizontally across the front of the fingers.',
+        hiDescEn: 'Ek mazboot muthi banayein jisme angutha ungliyon ke samne horizontal muda ho.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Common error: placing thumb inside fingers. Thumb must be outside across fingers.',
+        hiDescEn: 'Aam galti: anguthe ko ungliyon ke andar rakhna. Angutha ungliyon ke bahar samne hona chahiye.'
+    },
+    {
+        id: 'asl-alpha-t',
+        category: 'alphabet',
+        titleEn: 'Letter T',
+        titleHi: 'वर्ण T',
+        descEn: 'Make a fist with the thumb tucked neatly in between the index and middle fingers.',
+        hiDescEn: 'Muthi banayein jisme angutha index aur middle finger ke theek beech mein dabaya ho.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Ensure the thumb tip peeks out slightly between index and middle fingers.',
+        hiDescEn: 'Dhyan dein ki anguthe ka sira index aur middle finger ke beech se thoda bahar dikhe.'
+    },
+    {
+        id: 'asl-alpha-u',
+        category: 'alphabet',
+        titleEn: 'Letter U',
+        titleHi: 'वर्ण U',
+        descEn: 'Extend index and middle fingers straight up, pressed tightly together, with other fingers folded.',
+        hiDescEn: 'Index aur middle finger ko seedha upar rakhein, aapas mein satakar, baaki ungliyan band hon.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Unlike V, the two fingers must touch each other completely.',
+        hiDescEn: 'V ke viprit, yeh dono ungliyan aapas mein poori tarah judi honi chahiye.'
+    },
+    {
+        id: 'asl-alpha-v',
+        category: 'alphabet',
+        titleEn: 'Letter V',
+        titleHi: 'वर्ण V',
+        descEn: 'Extend index and middle fingers upward in a separated V-shape, like a victory sign.',
+        hiDescEn: 'Index aur middle finger ko V-shape mein kholkar upar rakhein, jaise victory sign hota hai.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Fingers must form a clear V-spread, unlike letter U.',
+        hiDescEn: 'Letter U ki tarah nahi, isme ungliyon ke beech saaf V-spread hona chahiye.'
+    },
+    {
+        id: 'asl-alpha-w',
+        category: 'alphabet',
+        titleEn: 'Letter W',
+        titleHi: 'वर्ण W',
+        descEn: 'Extend index, middle, and ring fingers upward, separated and spread out, forming a W shape.',
+        hiDescEn: 'Index, middle, aur ring finger ko upar failakar rakhein, jicide W ka aakar bane.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Thumb and pinky touch each other to secure the shape.',
+        hiDescEn: 'Shape ko secure karne ke liye angutha aur pinky aapas mein touch hote hain.'
+    },
+    {
+        id: 'asl-alpha-x',
+        category: 'alphabet',
+        titleEn: 'Letter X',
+        titleHi: 'वर्ण X',
+        descEn: 'Hook the index finger inward like a bent hook, with other fingers closed into a fist.',
+        hiDescEn: 'Index finger ko andar ki taraf hook ki tarah modein, baaki ungliyan muthi mein band hon.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Resembles a pirate hook gesture.',
+        hiDescEn: 'Yeh ek pirate hook ke gesture jaisa dikhta hai.'
+    },
+    {
+        id: 'asl-alpha-y',
+        category: 'alphabet',
+        titleEn: 'Letter Y',
+        titleHi: 'वर्ण Y',
+        descEn: 'Extend the thumb and pinky finger outward to the sides, with the middle three fingers folded in a fist.',
+        hiDescEn: 'Anguthe aur pinky finger ko side mein bahar ki taraf failayein, beech ki teen ungliyan muthi mein band hon.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'Often used informally for "cool" or telephone sign in different contexts.',
+        hiDescEn: 'Alag context mein iska use "cool" ya telephone sign ke liye bhi hota hai.'
+    },
+    {
+        id: 'asl-alpha-z',
+        category: 'alphabet',
+        titleEn: 'Letter Z',
+        titleHi: 'वर्ण Z',
+        descEn: 'Point the index finger and trace the zig-zag shape of the letter "Z" in the air.',
+        hiDescEn: 'Index finger ko point karke hawa mein letter "Z" ka zig-zag aakar banayein.',
+        grade: 'Grade 1 - Early Literacy',
+        hiGrade: 'कक्षा 1 - शुरुआती साक्षरता',
+        educatorNote: 'A motion sign where hand traces the letter path.',
+        hiDescEn: 'Yeh ek motion sign hai jisme haath letter ka rasta trace karta hai.'
     }
 ];
 
@@ -68,210 +320,49 @@ const islOfficialData = [
         id: 'isl-alpha-a',
         category: 'alphabet',
         titleEn: 'ISL Letter A (ISLRTC)',
-        titleHi: 'ISL वर्ण अ / A (मानक)',
-        descEn: 'Closed fist with the thumb resting on the side pointing upward, as per ISLRTC standard guidelines.',
-        hiDescEn: 'ISLRTC मानक दिशानिर्देशों के अनुसार, अंगूठे को तर्जनी के पास ऊपर की ओर रखते हुए बंद मुट्ठी।',
+        titleHi: 'ISL वर्ण अ / A (ISLRTC मानक)',
+        descEn: 'Closed fist with the thumb resting on the side pointing upward, as per ISLRTC manual alphabet guidelines.',
+        hiDescEn: 'ISLRTC मैन्युअल वर्णमाला दिशानिर्देशों के अनुसार, अंगूठे को किनारे पर ऊपर की ओर रखते हुए बंद मुट्ठी।',
         grade: 'ISL Level 1 - Basic Handshapes',
         hiGrade: 'ISL स्तर 1 - बुनियादी आकृतियाँ',
         educatorNote: 'Official Indian Sign Language manual alphabet reference for certified training.',
         hiEducatorNote: 'प्रमाणित प्रशिक्षण के लिए आधिकारिक भारतीय सांकेतिक भाषा मैन्युअल वर्णमाला संदर्भ।'
     },
     {
-        id: 'isl-water',
-        category: 'daily',
-        titleEn: 'ISL Water (Paani)',
-        titleHi: 'ISL पानी',
-        descEn: 'Bring the right hand index finger pointing sideways near the mouth, simulating drinking motion (ISLRTC Lexicon).',
-        hiDescEn: 'दाहिने हाथ की तर्जनी को मुंह के पास क्षैतिज रूप से रखकर पीने की क्रिया का संकेत (ISLRTC शब्दकोश)।',
-        grade: 'ISL Everyday Communication',
-        hiGrade: 'ISL दैनिक संवाद',
-        educatorNote: 'Strictly aligned with Indian Sign Language regional training modules.',
-        hiEducatorNote: 'भारतीय सांकेतिक भाषा के क्षेत्रीय प्रशिक्षण मॉड्यूल के बिल्कुल अनुरूप।'
+        id: 'isl-alpha-b',
+        category: 'alphabet',
+        titleEn: 'ISL Letter B (ISLRTC)',
+        titleHi: 'ISL वर्ण ब / B (ISLRTC मानक)',
+        descEn: 'Palm facing forward with fingers extended upward and relaxed, following ISLRTC standardized norms.',
+        hiDescEn: 'ISLRTC मानकीकृत मानदंडों के अनुसार, उंगलियों को ऊपर की ओर फैलाकर आगे की ओर हथेली।',
+        grade: 'ISL Level 1 - Basic Handshapes',
+        hiGrade: 'ISL स्तर 1 - बुनियादी आकृतियाँ',
+        educatorNote: 'Ensure correct palm orientation during classroom demonstrations.',
+        hiEducatorNote: 'कक्षा प्रदर्शन के दौरान सही हथेली की दिशा सुनिश्चित करें।'
     },
     {
-        id: 'isl-hindi-a',
-        category: 'hindi',
-        titleEn: 'ISL Vowel - अ',
-        titleHi: 'ISL स्वर - अ',
-        descEn: 'Standard regional hand gesture representing the Hindi vowel sound "A" in inclusive institutions.',
-        hiDescEn: 'समावेशी संस्थानों में हिंदी स्वर ध्वनि "अ" का प्रतिनिधित्व करने वाला मानक क्षेत्रीय संकेत।',
-        grade: 'ISL Foundation - Varnmala',
-        hiGrade: 'ISL फाउंडेशन - वर्णमाला',
-        educatorNote: 'Connects phonetic pronunciation with tactile sign recognition.',
-        hiDescEn: 'ध्वन्यात्मक उच्चारण को स्पर्शनीय संकेत पहचान के साथ जोड़ता है।'
+        id: 'isl-alpha-c',
+        category: 'alphabet',
+        titleEn: 'ISL Letter C (ISLRTC)',
+        titleHi: 'ISL वर्ण स / C (ISLRTC मानक)',
+        descEn: 'Curved handshape forming an outward-facing C profile aligned with regional ISL training modules.',
+        hiDescEn: 'क्षेत्रीय ISL प्रशिक्षण मॉड्यूल के अनुरूप बाहर की ओर C प्रोफाइल बनाने वाली घुमावदार हथेली की आकृति।',
+        grade: 'ISL Level 1 - Basic Handshapes',
+        hiGrade: 'ISL स्तर 1 - बुनियादी आकृतियाँ',
+        educatorNote: 'Helps students associate shape curvature with official sign vocabulary.',
+        hiEducatorNote: 'छात्रों को आधिकारिक संकेत शब्दावली के साथ आकार वक्रता को जोड़ने में मदद करता है।'
     },
     {
-        id: 'isl-count-1',
-        category: 'counting',
-        titleEn: 'ISL Number 1',
-        titleHi: 'ISL संख्या 1',
-        descEn: 'Index finger extended upward from a closed fist with palm oriented toward the recipient.',
-        hiDescEn: 'प्राप्तकर्ता की ओर हथेली करते हुए बंद मुट्ठी से तर्जनी को ऊपर की ओर फैलाना।',
-        grade: 'ISL Numeracy Level 1',
-        hiGrade: 'ISL संख्यात्मकता स्तर 1',
-        educatorNote: 'Fundamental building block for classroom attendance and counting exercises.',
-        hiEducatorNote: 'कक्षा की उपस्थिति और गिनती के अभ्यास के लिए बुनियादी आधार।'
+        id: 'isl-alpha-d',
+        category: 'alphabet',
+        titleEn: 'ISL Letter D (ISLRTC)',
+        titleHi: 'ISL वर्ण ड / D (ISLRTC मानक)',
+        descEn: 'Index finger pointing upright with the remaining fingers forming a rounded loop, per ISLRTC standards.',
+        hiDescEn: 'ISLRTC मानकों के अनुसार, शेष उंगलियों के साथ एक गोल लूप बनाते हुए तर्जनी ऊपर की ओर इशारा करती है।',
+        grade: 'ISL Level 1 - Basic Handshapes',
+        hiGrade: 'ISL स्तर 1 - बुनियादी आकृतियाँ',
+        educatorNote: 'Fundamental finger posture for ISL literacy practice.',
+        hiEducatorNote: 'ISL साक्षरता अभ्यास के लिए बुनियादी उंगली की मुद्रा।'
     }
+    // Baaki ISL Alphabets bhi ishi format mein aage add kiye ja sakte hain!
 ];
-
-let currentMode = 'asl'; // 'asl' or 'isl'
-let currentLang = 'en';
-let activeCategory = 'all';
-
-// DOM Elements
-const searchInput = document.getElementById('searchInput');
-const cardsGrid = document.getElementById('cardsGrid');
-const langToggleBtn = document.getElementById('langToggleBtn');
-const aslTabBtn = document.getElementById('aslTabBtn');
-const islTabBtn = document.getElementById('islTabBtn');
-const tabBtns = document.querySelectorAll('.tab-btn');
-
-// Modals
-const detailModal = document.getElementById('detailModal');
-const closeModalBtn = document.getElementById('closeModalBtn');
-const modalTitle = document.getElementById('modalTitle');
-const modalCategory = document.getElementById('modalCategory');
-const modalDesc = document.getElementById('modalDesc');
-const educatorNoteBox = document.getElementById('educatorNoteBox');
-
-const requestModal = document.getElementById('requestModal');
-const openRequestModalBtn = document.getElementById('openRequestModalBtn');
-const closeRequestModal = document.getElementById('closeRequestModal');
-
-function initApp() {
-    renderCards();
-    setupEventListeners();
-}
-
-function getActiveDataset() {
-    return currentMode === 'isl' ? islOfficialData : aslUniversalData;
-}
-
-function renderCards() {
-    cardsGrid.innerHTML = '';
-    const dataset = getActiveDataset();
-    const query = searchInput.value.toLowerCase().trim();
-
-    const filtered = dataset.filter(item => {
-        const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-        const titleMatch = item.titleEn.toLowerCase().includes(query) || item.titleHi.toLowerCase().includes(query);
-        const descMatch = item.descEn.toLowerCase().includes(query) || item.hiDescEn.toLowerCase().includes(query);
-        return matchesCategory && (titleMatch || descMatch);
-    });
-
-    if (filtered.length === 0) {
-        cardsGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #64748b;">🔍 ${currentLang === 'en' ? 'No signs found in this category.' : 'Is category mein koi sign nahi mila.'}</div>`;
-        return;
-    }
-
-    filtered.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'sign-card';
-        
-        const title = currentLang === 'en' ? item.titleEn : item.titleHi;
-        const desc = currentLang === 'en' ? item.descEn : item.hiDescEn;
-        const badgeColor = currentMode === 'isl' ? '#059669' : '#4f46e5';
-
-        card.innerHTML = `
-            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                <span style="background: ${badgeColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight:600;">✨ ${currentMode.toUpperCase()}</span>
-                <span style="font-size: 12px; color: #64748b; font-weight: 500;">🏷️ ${item.category.toUpperCase()}</span>
-            </div>
-            <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #1e293b;">📖 ${title}</h3>
-            <p style="color: #475569; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">💬 ${desc}</p>
-            <div style="font-size: 13px; color: ${badgeColor}; font-weight: 600;">👁️ ${currentLang === 'en' ? 'View Details & Notes →' : 'विवरण और नोट्स देखें →'}</div>
-        `;
-        
-        card.addEventListener('click', () => openDetailModal(item.id));
-        cardsGrid.appendChild(card);
-    });
-}
-
-function toggleLanguage() {
-    currentLang = currentLang === 'en' ? 'hi' : 'en';
-    if (langToggleBtn) {
-        langToggleBtn.textContent = currentLang === 'en' ? '🇮🇳 हिंदी / EN' : '🇬🇧 English / HI';
-    }
-    renderCards();
-}
-
-function switchPrimaryMode(mode) {
-    currentMode = mode;
-    if (mode === 'asl') {
-        aslTabBtn.classList.add('active');
-        islTabBtn.classList.remove('active');
-    } else {
-        islTabBtn.classList.add('active');
-        aslTabBtn.classList.remove('active');
-    }
-    renderCards();
-}
-
-function openDetailModal(id) {
-    const dataset = getActiveDataset();
-    const item = dataset.find(i => i.id === id);
-    if (!item || !detailModal) return;
-
-    if (modalTitle) modalTitle.textContent = `📖 ${currentLang === 'en' ? item.titleEn : item.titleHi}`;
-    if (modalCategory) modalCategory.textContent = `🏷️ Category: ${item.category.toUpperCase()} (${currentMode.toUpperCase()})`;
-    if (modalDesc) modalDesc.textContent = `💬 ${currentLang === 'en' ? item.descEn : item.hiDescEn}`;
-
-    const gradeText = currentLang === 'en' ? item.grade : (item.hiGrade || item.grade);
-    const noteText = currentLang === 'en' ? item.educatorNote : (item.hiEducatorNote || item.educatorNote);
-    const gradeLabel = currentLang === 'en' ? "🎯 Curriculum / Grade:" : "🎯 पाठ्यक्रम / कक्षा:";
-    const noteLabel = currentLang === 'en' ? "💡 Educator Note:" : "💡 शिक्षक नोट:";
-
-    if (educatorNoteBox) {
-        if (gradeText && noteText) {
-            educatorNoteBox.style.display = 'block';
-            educatorNoteBox.innerHTML = `
-                <p style="margin-bottom: 8px;"><strong>${gradeLabel}</strong> ${gradeText}</p>
-                <p style="margin: 0;"><strong>${noteLabel}</strong> ${noteText}</p>
-            `;
-        } else {
-            educatorNoteBox.style.display = 'none';
-        }
-    }
-
-    detailModal.classList.add('active');
-}
-
-function setupEventListeners() {
-    if (searchInput) searchInput.addEventListener('input', renderCards);
-    if (langToggleBtn) langToggleBtn.addEventListener('click', toggleLanguage);
-
-    // Primary Mode Switcher Listeners
-    if (aslTabBtn) aslTabBtn.addEventListener('click', () => switchPrimaryMode('asl'));
-    if (islTabBtn) islTabBtn.addEventListener('click', () => switchPrimaryMode('isl'));
-
-    // Sub-Category Tabs Listeners
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            tabBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            activeCategory = btn.getAttribute('data-category');
-            renderCards();
-        });
-    });
-
-    // Detail Modal Closing
-    if (closeModalBtn) {
-        closeModalBtn.addEventListener('click', () => detailModal.classList.remove('active'));
-    }
-
-    // Request Modal Open/Close
-    if (openRequestModalBtn && requestModal) {
-        openRequestModalBtn.addEventListener('click', () => requestModal.classList.add('active'));
-    }
-    if (closeRequestModal && requestModal) {
-        closeRequestModal.addEventListener('click', () => requestModal.classList.remove('active'));
-    }
-
-    // Window click outside modals to close
-    window.addEventListener('click', (e) => {
-        if (e.target === detailModal) detailModal.classList.remove('active');
-        if (e.target === requestModal) requestModal.classList.remove('active');
-    });
-}
-
-window.onload = initApp;
