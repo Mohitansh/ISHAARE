@@ -1,6 +1,7 @@
 :root {
     --primary-color: #4f46e5;
     --primary-hover: #4338ca;
+    --isl-color: #059669; /* Emerald Green for Official ISL */
     --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     --card-bg: #ffffff;
     --text-main: #1e293b;
@@ -40,10 +41,45 @@ header {
     margin-top: 5px;
 }
 
+/* Primary Mode Switcher Tabs (ASL vs ISL) */
+.primary-mode-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.mode-tab-btn {
+    flex: 1;
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px solid #cbd5e1;
+    background: #ffffff;
+    color: #475569;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.mode-tab-btn[data-mode="asl"].active {
+    background: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.mode-tab-btn[data-mode="isl"].active {
+    background: var(--isl-color);
+    color: #ffffff;
+    border-color: var(--isl-color);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
 .controls-row {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     flex-wrap: wrap;
 }
 
@@ -149,7 +185,6 @@ header {
     z-index: 1000;
 }
 
-/* Active Modal Show */
 .modal.active {
     display: flex;
 }
@@ -188,6 +223,15 @@ header {
     border-left: 4px solid var(--primary-color);
     padding: 12px;
     margin: 15px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+}
+
+.educator-note-box {
+    background: #f1f5f9;
+    border-left: 4px solid #059669;
+    padding: 12px;
+    margin-top: 15px;
     border-radius: 0 8px 8px 0;
     font-size: 14px;
 }

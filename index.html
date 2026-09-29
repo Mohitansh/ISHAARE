@@ -24,17 +24,22 @@
             <p class="tagline">Visual signs & concept reference for educators</p>
         </header>
 
-        <!-- Controls Row: Search, Language Toggle, Mode Toggle, Request Button -->
+        <!-- Primary Mode Tabs: ASL vs Official ISL (Top Level) -->
+        <div class="primary-mode-tabs">
+            <button class="mode-tab-btn active" data-mode="asl" id="aslTabBtn">🔵 ASL / Universal Mode</button>
+            <button class="mode-tab-btn" data-mode="isl" id="islTabBtn">🟢 Official ISL Standard (ISLRTC)</button>
+        </div>
+
+        <!-- Controls Row: Search, Language Toggle, Request Button -->
         <div class="controls-row">
-            <input type="text" id="searchInput" placeholder="Search signs..." autocomplete="off">
+            <input type="text" id="searchInput" placeholder="Search signs (e.g., A, Water, Pani)..." autocomplete="off">
             <button id="langToggleBtn" class="action-btn">🇮🇳 हिंदी / EN</button>
-            <button id="modeToggleBtn" class="action-btn" style="background: #1976d2; color: white; font-weight: 600;">🔵 ASL Mode</button>
             <button id="openRequestModalBtn" class="action-btn request-btn" title="Request a Sign">?</button>
         </div>
 
-        <!-- Category Filter Tabs -->
+        <!-- Sub-Category Filter Tabs -->
         <div class="category-tabs">
-            <button class="tab-btn active" data-category="all">All</button>
+            <button class="tab-btn active" data-category="all">All Signs</button>
             <button class="tab-btn" data-category="alphabet">English A-Z</button>
             <button class="tab-btn" data-category="hindi">हिंदी वर्णमाला</button>
             <button class="tab-btn" data-category="counting">Counting</button>
@@ -54,8 +59,8 @@
         </footer>
     </div>
 
-    <!-- Welcome / How to Use Popup Modal (Bulletproof Direct Inline Close) -->
-    <div id="welcomeModal" class="modal active" style="display: flex;">
+    <!-- Welcome / How to Use Popup Modal -->
+    <div id="welcomeModal" class="modal active">
         <div class="modal-content welcome-popup">
             <span id="closeWelcome" class="close-btn" onclick="document.getElementById('welcomeModal').style.display='none'; document.getElementById('welcomeModal').classList.remove('active');">&times;</span>
             <div class="modal-emoji">🙏🏻</div>
@@ -64,9 +69,9 @@
             
             <div class="instruction-box">
                 <h4>📖 How to Use:</h4>
-                <p>1. <strong>Tabs</strong> par click karke category select karein.</p>
-                <p>2. <strong>Search Bar</strong> mein direct koi bhi word ya letter type karein.</p>
-                <p>3. <strong>Card</strong> par click karke uska detailed gesture aur <strong>Educator Notes</strong> dekhein.</p>
+                <p>1. Sabse upar <strong>ASL</strong> ya <strong>Official ISL</strong> mode chunein.</p>
+                <p>2. Neeche diye gaye <strong>Category Tabs</strong> se topic select karein.</p>
+                <p>3. <strong>Search Bar</strong> mein direct type karke sign aur educator notes dekhein.</p>
             </div>
 
             <button id="gotItBtn" class="submit-btn" onclick="document.getElementById('welcomeModal').style.display='none'; document.getElementById('welcomeModal').classList.remove('active');">Got it, Let's Start!</button>

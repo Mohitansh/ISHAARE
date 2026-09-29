@@ -1,8 +1,8 @@
-// --- ISHAARE APP: FINAL CORE LOGIC ---
+// --- ISHARE APP: ASL & OFFICIAL ISL (ISLRTC STANDARDS) DATA ---
 
 const aslUniversalData = [
     {
-        id: 'alpha-a',
+        id: 'asl-alpha-a',
         category: 'alphabet',
         titleEn: 'Letter A',
         titleHi: 'वर्ण A',
@@ -14,7 +14,7 @@ const aslUniversalData = [
         hiEducatorNote: 'Dhyan dein ki angutha seedha ho, ungliyon ke upar na muda ho.'
     },
     {
-        id: 'alpha-b',
+        id: 'asl-alpha-b',
         category: 'alphabet',
         titleEn: 'Letter B',
         titleHi: 'वर्ण B',
@@ -26,7 +26,7 @@ const aslUniversalData = [
         hiEducatorNote: 'Aam galti: bacha ungliyan mod sakta hai. Unhe bilkul seedha rakhwayein.'
     },
     {
-        id: 'word-water',
+        id: 'asl-water',
         category: 'daily',
         titleEn: 'Water',
         titleHi: 'पानी',
@@ -36,37 +36,85 @@ const aslUniversalData = [
         hiGrade: 'कक्षा 1-3 - दैनिक शब्दावली',
         educatorNote: 'Essential for inclusive classrooms for hydration requests.',
         hiEducatorNote: 'Paani ki maang ke liye inclusive classroom mein yeh sabse zaroori hai.'
+    },
+    {
+        id: 'asl-count-1',
+        category: 'counting',
+        titleEn: 'Number 1',
+        titleHi: 'संख्या 1',
+        descEn: 'Hold hand up with index finger pointing straight up, palm facing inward.',
+        hiDescEn: 'Index finger ko upar ki taraf seedha khada rakhein, hatheli andar ki taraf.',
+        grade: 'Grade 1 - Basic Math',
+        hiGrade: 'कक्षा 1 - गणित बुनियादी',
+        educatorNote: 'Keep other fingers folded tightly into the palm.',
+        hiEducatorNote: 'Baaki ungliyon ko hatheli mein mazbooti se mod kar rakhein.'
+    },
+    {
+        id: 'asl-emo-happy',
+        category: 'emotions',
+        titleEn: 'Happy',
+        titleHi: 'खुश',
+        descEn: 'Brush flat hands upward against the chest twice with a smiling expression.',
+        hiDescEn: 'Chapti hatheliyon ko chhaati par do baar upar ki taraf le jayein, muskurate hue.',
+        grade: 'Social-Emotional Learning',
+        hiGrade: 'सामाजिक-भावनात्मक शिक्षण',
+        educatorNote: 'Facial expressions are vital for conveying emotion signs accurately.',
+        hiEducatorNote: 'Bhavnao ko sahi se darshane ke liye chehre ke hav-bhav mahatvapurna hain.'
     }
 ];
 
 const islOfficialData = [
     {
-        id: 'isl-a',
+        id: 'isl-alpha-a',
         category: 'alphabet',
-        titleEn: 'ISL Letter A',
-        titleHi: 'ISL वर्ण A',
-        descEn: 'Closed fist with the thumb resting on the side pointing upward (ISLRTC Standard).',
-        hiDescEn: 'Muthi band aur angutha side mein upar ki taraf (ISLRTC मानक).',
+        titleEn: 'ISL Letter A (ISLRTC)',
+        titleHi: 'ISL वर्ण अ / A (मानक)',
+        descEn: 'Closed fist with the thumb resting on the side pointing upward, as per ISLRTC standard guidelines.',
+        hiDescEn: 'ISLRTC मानक दिशानिर्देशों के अनुसार, अंगूठे को तर्जनी के पास ऊपर की ओर रखते हुए बंद मुट्ठी।',
         grade: 'ISL Level 1 - Basic Handshapes',
         hiGrade: 'ISL स्तर 1 - बुनियादी आकृतियाँ',
-        educatorNote: 'Official ISL manual alphabet reference for certified training.',
-        hiEducatorNote: 'Prashikshit shikshakon ke liye aadhikarik ISL manual alphabet sandarbh.'
+        educatorNote: 'Official Indian Sign Language manual alphabet reference for certified training.',
+        hiEducatorNote: 'प्रमाणित प्रशिक्षण के लिए आधिकारिक भारतीय सांकेतिक भाषा मैन्युअल वर्णमाला संदर्भ।'
     },
     {
         id: 'isl-water',
         category: 'daily',
-        titleEn: 'ISL Water',
+        titleEn: 'ISL Water (Paani)',
         titleHi: 'ISL पानी',
-        descEn: 'Bring the right hand index finger pointing sideways near the mouth, simulating drinking motion.',
-        hiDescEn: 'Daye haath ki index finger ko muh ke paas rakh kar peene ka ishara karein.',
+        descEn: 'Bring the right hand index finger pointing sideways near the mouth, simulating drinking motion (ISLRTC Lexicon).',
+        hiDescEn: 'दाहिने हाथ की तर्जनी को मुंह के पास क्षैतिज रूप से रखकर पीने की क्रिया का संकेत (ISLRTC शब्दकोश)।',
         grade: 'ISL Everyday Communication',
         hiGrade: 'ISL दैनिक संवाद',
         educatorNote: 'Strictly aligned with Indian Sign Language regional training modules.',
-        hiEducatorNote: 'Bharatiya Sanket Bhasha ke kshetriya prashikshan modules ke anuroop.'
+        hiEducatorNote: 'भारतीय सांकेतिक भाषा के क्षेत्रीय प्रशिक्षण मॉड्यूल के बिल्कुल अनुरूप।'
+    },
+    {
+        id: 'isl-hindi-a',
+        category: 'hindi',
+        titleEn: 'ISL Vowel - अ',
+        titleHi: 'ISL स्वर - अ',
+        descEn: 'Standard regional hand gesture representing the Hindi vowel sound "A" in inclusive institutions.',
+        hiDescEn: 'समावेशी संस्थानों में हिंदी स्वर ध्वनि "अ" का प्रतिनिधित्व करने वाला मानक क्षेत्रीय संकेत।',
+        grade: 'ISL Foundation - Varnmala',
+        hiGrade: 'ISL फाउंडेशन - वर्णमाला',
+        educatorNote: 'Connects phonetic pronunciation with tactile sign recognition.',
+        hiDescEn: 'ध्वन्यात्मक उच्चारण को स्पर्शनीय संकेत पहचान के साथ जोड़ता है।'
+    },
+    {
+        id: 'isl-count-1',
+        category: 'counting',
+        titleEn: 'ISL Number 1',
+        titleHi: 'ISL संख्या 1',
+        descEn: 'Index finger extended upward from a closed fist with palm oriented toward the recipient.',
+        hiDescEn: 'प्राप्तकर्ता की ओर हथेली करते हुए बंद मुट्ठी से तर्जनी को ऊपर की ओर फैलाना।',
+        grade: 'ISL Numeracy Level 1',
+        hiGrade: 'ISL संख्यात्मकता स्तर 1',
+        educatorNote: 'Fundamental building block for classroom attendance and counting exercises.',
+        hiEducatorNote: 'कक्षा की उपस्थिति और गिनती के अभ्यास के लिए बुनियादी आधार।'
     }
 ];
 
-let currentMode = 'asl';
+let currentMode = 'asl'; // 'asl' or 'isl'
 let currentLang = 'en';
 let activeCategory = 'all';
 
@@ -74,11 +122,11 @@ let activeCategory = 'all';
 const searchInput = document.getElementById('searchInput');
 const cardsGrid = document.getElementById('cardsGrid');
 const langToggleBtn = document.getElementById('langToggleBtn');
-const modeToggleBtn = document.getElementById('modeToggleBtn');
+const aslTabBtn = document.getElementById('aslTabBtn');
+const islTabBtn = document.getElementById('islTabBtn');
 const tabBtns = document.querySelectorAll('.tab-btn');
 
 // Modals
-const welcomeModal = document.getElementById('welcomeModal');
 const detailModal = document.getElementById('detailModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
 const modalTitle = document.getElementById('modalTitle');
@@ -112,7 +160,7 @@ function renderCards() {
     });
 
     if (filtered.length === 0) {
-        cardsGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #64748b;">🔍 ${currentLang === 'en' ? 'No signs found.' : 'Koi sign nahi mila.'}</div>`;
+        cardsGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #64748b;">🔍 ${currentLang === 'en' ? 'No signs found in this category.' : 'Is category mein koi sign nahi mila.'}</div>`;
         return;
     }
 
@@ -122,15 +170,16 @@ function renderCards() {
         
         const title = currentLang === 'en' ? item.titleEn : item.titleHi;
         const desc = currentLang === 'en' ? item.descEn : item.hiDescEn;
+        const badgeColor = currentMode === 'isl' ? '#059669' : '#4f46e5';
 
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                <span style="background: ${currentMode === 'isl' ? '#2e7d32' : '#4f46e5'}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight:600;">✨ ${currentMode.toUpperCase()}</span>
+                <span style="background: ${badgeColor}; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight:600;">✨ ${currentMode.toUpperCase()}</span>
                 <span style="font-size: 12px; color: #64748b; font-weight: 500;">🏷️ ${item.category.toUpperCase()}</span>
             </div>
             <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #1e293b;">📖 ${title}</h3>
             <p style="color: #475569; font-size: 14px; margin: 0 0 15px 0; line-height: 1.4;">💬 ${desc}</p>
-            <div style="font-size: 13px; color: var(--primary-color); font-weight: 600;">👁️ ${currentLang === 'en' ? 'View Details & Notes →' : 'विवरण और नोट्स देखें →'}</div>
+            <div style="font-size: 13px; color: ${badgeColor}; font-weight: 600;">👁️ ${currentLang === 'en' ? 'View Details & Notes →' : 'विवरण और नोट्स देखें →'}</div>
         `;
         
         card.addEventListener('click', () => openDetailModal(item.id));
@@ -146,11 +195,14 @@ function toggleLanguage() {
     renderCards();
 }
 
-function toggleMode() {
-    currentMode = currentMode === 'asl' ? 'isl' : 'asl';
-    if (modeToggleBtn) {
-        modeToggleBtn.textContent = currentMode === 'isl' ? '🟢 ISL Mode' : '🔵 ASL Mode';
-        modeToggleBtn.style.background = currentMode === 'isl' ? '#2e7d32' : '#1976d2';
+function switchPrimaryMode(mode) {
+    currentMode = mode;
+    if (mode === 'asl') {
+        aslTabBtn.classList.add('active');
+        islTabBtn.classList.remove('active');
+    } else {
+        islTabBtn.classList.add('active');
+        aslTabBtn.classList.remove('active');
     }
     renderCards();
 }
@@ -187,9 +239,12 @@ function openDetailModal(id) {
 function setupEventListeners() {
     if (searchInput) searchInput.addEventListener('input', renderCards);
     if (langToggleBtn) langToggleBtn.addEventListener('click', toggleLanguage);
-    if (modeToggleBtn) modeToggleBtn.addEventListener('click', toggleMode);
 
-    // Category Tabs
+    // Primary Mode Switcher Listeners
+    if (aslTabBtn) aslTabBtn.addEventListener('click', () => switchPrimaryMode('asl'));
+    if (islTabBtn) islTabBtn.addEventListener('click', () => switchPrimaryMode('isl'));
+
+    // Sub-Category Tabs Listeners
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             tabBtns.forEach(b => b.classList.remove('active'));
