@@ -24,10 +24,10 @@
             <p class="tagline">Visual signs & concept reference for educators</p>
         </header>
 
-        <!-- Primary Mode Tabs: ASL vs Official ISL (Top Level) -->
+        <!-- Primary Mode Tabs: ASL vs Official ISL -->
         <div class="primary-mode-tabs">
-            <button class="mode-tab-btn active" data-mode="asl" id="aslTabBtn">🔵 ASL / Universal Mode</button>
-            <button class="mode-tab-btn" data-mode="isl" id="islTabBtn">🟢 Official ISL Standard (ISLRTC)</button>
+            <button class="mode-tab-btn active" id="aslTabBtn" data-mode="asl">🔵 ASL / Universal Mode</button>
+            <button class="mode-tab-btn" id="islTabBtn" data-mode="isl">🟢 Official ISL Standard (ISLRTC)</button>
         </div>
 
         <!-- Controls Row: Search, Language Toggle, Request Button -->
@@ -60,7 +60,7 @@
     </div>
 
     <!-- Welcome / How to Use Popup Modal -->
-    <div id="welcomeModal" class="modal active">
+    <div id="welcomeModal" class="modal active" style="display: flex;">
         <div class="modal-content welcome-popup">
             <span id="closeWelcome" class="close-btn" onclick="document.getElementById('welcomeModal').style.display='none'; document.getElementById('welcomeModal').classList.remove('active');">&times;</span>
             <div class="modal-emoji">🙏🏻</div>
